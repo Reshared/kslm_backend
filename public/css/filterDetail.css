@@ -1,0 +1,191 @@
+.filter-detail .container .detail-containter .detail-header {
+  font-size: 0;
+}
+.filter-detail .container .detail-containter .detail-header .detail-img {
+  display: inline-block;
+  width: 319px;
+  height: 293px;
+  border: 1px solid #E3E4E8;
+  line-height: 1;
+  margin-right: 20px;
+}
+.filter-detail .container .detail-containter .detail-header .detail-img img {
+  width: 100%;
+}
+.filter-detail .container .detail-containter .detail-header .pic-group {
+  display: inline-block;
+  width: 100px;
+  height: inherit;
+  vertical-align: top;
+  margin-right: 40px;
+}
+
+.filter-detail .container .detail-containter .detail-header .pic-group .pic-control {
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  font-size: 0px;
+  text-align: center;
+  cursor: pointer;
+}
+.filter-detail .container .detail-containter .detail-header .pic-group .pic-control:after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: #999;
+  transform: rotate(25deg);
+  position: relative;
+  left: -2px;
+}
+.filter-detail .container .detail-containter .detail-header .pic-group .pic-control:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: #999;
+  transform: rotate(-25deg);
+}
+.filter-detail .container .detail-containter .detail-header .pic-group .pic-control:hover:after, 
+.filter-detail .container .detail-containter .detail-header .pic-group .pic-control:hover:before {
+  background-color: #00A0E9;
+} 
+.filter-detail .container .detail-containter .detail-header .pic-group .pic-next {
+  transform: rotate(-180deg);
+  position: relative;
+  top: -10px;
+}
+.filter-detail .container .detail-containter .detail-header .pic-group-swiper .swiper-slide li {
+  width: 100px;
+  height: 80px;
+  line-height: 1;
+  border: 1px solid #E3E4E8;
+  margin-bottom: 10px;
+}
+.filter-detail .container .detail-containter .detail-header .pic-group-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+.filter-detail .container .detail-containter .detail-header .detail-desc {
+  display: inline-block;
+  font-size: 14px;
+  width: calc(100% - 479px);
+  vertical-align: top;
+}
+
+.filter-detail .container .detail-containter .detail-header .detail-desc .desc-title {
+  margin: 20px 0 30px;
+  font-weight: bold;
+}
+.filter-detail .container .detail-containter .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #666;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+.filter-detail .container .detail-containter .detail-header .detail-desc li {
+  line-height: 1.75;
+}
+
+.filter-detail .container .detail-containter .block-container {
+  margin-top: 20px;
+}
+.filter-detail .container .detail-containter .block-container .block-label {
+  height: 42px;
+  line-height: 42px;
+  background-color: #F6F6F6;
+  font-size: 16px;
+  color: #000;
+  padding: 0 20px;
+}
+.filter-detail .container .detail-containter .block-container .block-content {
+  padding: 20px 20px 0 20px;
+}
+.filter-detail .container .detail-containter .block-container .block-content .table thead th {
+  height: 40px;
+  line-height: 40px;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  border-bottom-width: 1px;
+  color: #000;
+}
+.filter-detail .container .detail-containter .block-container .block-content .table tr td {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+.filter-detail .container .detail-containter .block-container .block-content .product-spec li {
+  line-height: 2;
+  font-size: 16px;
+  color: #666;
+}
+.filter-detail .container .detail-containter .block-container .block-content .operation-list li {
+  width: 30%;
+  float: left;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.filter-detail .container .detail-containter .block-container .block-content .operation-list li .label {
+  color: #333;
+  font-size: 16px;
+}
+.filter-detail .container .detail-containter .block-container .block-content .operation-list li .text {
+  color: #666;
+}
+.filter-detail .container .detail-containter .block-container .block-content .operation-list li:nth-child(3n - 1) {
+  margin: 0 5%;
+}
+.filter-detail .container .detail-containter .block-container .block-content .careful-list li {
+  line-height: 20px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.filter-detail .container .detail-containter .block-container .block-content .careful-list li .dot {
+  background: #333;
+}
+.filter-detail .container .detail-containter .block-container .block-content .careful-desc {
+  line-height: 2;
+  color: #000;
+}
+.filter-detail .container .detail-containter .block-container .block-content .technical-support li {
+  width: 30%;
+  border: 1px solid #E6E6E6;
+  padding: 0 10px 12px;
+  float: left;
+}
+.filter-detail .container .detail-containter .block-container .block-content .technical-support li:nth-child(2) {
+  margin: 0 5%;
+}
+.filter-detail .container .detail-containter .block-container .block-content .technical-support li .title {
+  border-bottom: 1px solid #E6E6E6;
+  width: 100%;
+}
+.filter-detail .container .detail-containter .block-container .block-content .technical-support li .title span {
+  display: inline-block;
+  color: #000;
+  width: 47%;
+  padding: 12px 0 8px;
+  font-size: 16px;
+}
+.filter-detail .container .detail-containter .block-container .block-content .technical-support li .title span:after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  width: 100%;
+  background-color: #00A0E9;
+}
+.filter-detail .container .detail-containter .block-container .block-content .technical-support li .row-ellipsis {
+  margin-top: 10px;
+  line-height: 2;
+  color: #333;
+}
+.filter-detail .container .detail-containter .block-container .margin-bottom {
+  margin-bottom: 20px;
+}

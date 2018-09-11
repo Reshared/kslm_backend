@@ -1,0 +1,73 @@
+.support main .tab{
+  border-bottom: 1px solid #aaa;
+  text-align: center;
+}
+.support main .tab li {
+  display: inline-block;
+  width: 100px;
+  margin: 0 20px;
+  height: 75px;
+  line-height: 75px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.support main .tab li:after,
+.support main .tab li:before {
+  background-color: #333;
+  height: 2px;
+  bottom: 0px;
+}
+.support main .tab li.active:after,
+.support main .tab li.active:before {
+  background-color: #333;
+  height: 2px;
+  bottom: 0px;
+  width: 50%;
+}
+.support main .container .list-container .list-content li .item{
+  height: 210px;
+  padding: 30px 0;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  display: inline-block;
+  color: #555;
+  font-size: 0;
+  cursor: pointer;
+}
+.support main .container .list-container .list-content li .item img {
+  vertical-align: top;
+}
+.support main .container .list-container .list-content li .item a{
+  display: inline-block;
+  width: 200px;
+  line-height: 1;
+  vertical-align: top;
+}
+.support main .container .list-container .list-content li .item .text{
+  display: inline-block;
+  width: calc(100% - 244px);
+  margin-left: 40px;
+  box-sizing: border-box;
+}
+.support main .container .list-container .list-content li .item .text .title{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.support main .container .list-container .list-content li:hover .item .text .title {
+  color: #00A0E9;
+}
+.support main .container .list-container .list-content li .item .text .describe{
+  line-height: 30px;
+  height: 60px;
+  overflow: hidden;
+  font-size: 14px;
+}
+.support main .container .list-container .list-content li .item .text .item-footer{
+  position: absolute;
+  bottom: 40px;
+  width: calc(100% - 250px);
+}
+.support main .bottom a:hover {
+  color: #00A0E9;
+}

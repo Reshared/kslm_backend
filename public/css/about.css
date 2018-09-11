@@ -1,0 +1,110 @@
+.about main .tab{
+  border-bottom: 1px solid #aaa;
+  text-align: center;
+}
+.about main .tab li {
+  display: inline-block;
+  width: 100px;
+  margin: 0 20px;
+  height: 70px;
+  line-height: 70px;
+  cursor: pointer;
+}
+.about main .tab li:after,
+.about main .tab li:before {
+  background-color: #333;
+  height: 2px;
+  bottom: 0px;
+}
+.about main .tab li.active:after,
+.about main .tab li.active:before {
+  background-color: #333;
+  height: 2px;
+  bottom: 0px;
+  width: 50%;
+}
+/* .about main .tab li.active {
+  border-bottom: 1px solid #333;
+} */
+.about main .container .list-container .padding-30{
+  padding: 30px;
+}
+.about main .container .list-container .des-img{
+  width: 100%;
+  margin: 20px 0;
+}
+.about main .container .list-container .bottom-list{
+  font-size: 0px;
+  margin: 30px 0 40px;
+}
+.about main .container .list-container .bottom-list li{
+  width: 30%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 40px 0;
+  background-color: #fff;
+}
+.about main .container .list-container .bottom-list li.mar-5{
+  margin-right: 5%;
+}
+.about main .container .list-container .bottom-list li .text{
+  margin-top: 20px;
+  font-size: 16px;
+}
+/* 荣誉 */
+.about main .container .list-container .honor-list{
+  padding: 30px;
+  margin-bottom: 40px;
+  font-size: 0;
+}
+.about main .container .list-container .honor-list li{
+  display: inline-block;
+  width: 30%;
+  border: 1px solid #E6E6E6;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.about main .container .list-container .honor-list li.mar-5{
+  margin-right: 5%;
+}
+/* 荣誉 */
+.about main .container .list-container .mar-30-0{
+  margin: 0 0 40px;
+}
+/* 招聘 */
+.about main .container .list-container .job-content{
+  padding: 30px;
+  margin-bottom: 40px;
+}
+.about main .container .list-container .job-content img{
+  width: 100%;
+}
+.about main .container .list-container .job-content .item{
+  margin: 20px 0;
+}
+.about main .container .list-container .job-content .item .padding-l-20{
+  padding-left: 20px;
+}
+.about main .container .list-container .job-content .item .title{
+  background-color: rgba(204,205,204,.3);
+  height: 40px;
+  line-height: 40px;
+}
+.about main .container .list-container .job-content .item .title{
+  background-color: rgba(204,205,204,.3);
+  height: 40px;
+  line-height: 40px;
+  margin-bottom:10px;
+}
+.about main .container .list-container .job-content .item .title .mar-r-10px{
+  margin-right:10px;
+}
+/* .about main .container .list-container .job-content .item .text{
+  background-color: #ccc;
+} */
+.about main .container .list-container .job-content .item .text .line{
+  line-height: 26px;
+}
+.about main .container .list-container .job-content .item .text .mar-r-20{
+  margin-right:20px;
+}

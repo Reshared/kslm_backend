@@ -1,0 +1,42 @@
+.contact main .container{
+  padding-bottom: 40px;
+}
+.contact main .container .line{
+  height: 320px;
+  margin-top: 20px;
+  font-size: 0;
+}
+.contact main .container .line .map{
+  width: 580px;
+  margin-right: 36px;
+  /* background: url('../images/map.png') no-repeat; */
+  background-size: contain;
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+}
+.contact main .container .line .loc-describe{
+  width: 580px;
+  box-sizing: border-box;
+  border: 1px dashed #ccc;
+  display: inline-block;
+  height: 100%;
+  padding: 20px;
+}
+.contact main .container .line .loc-describe .company{
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 20px;
+}
+.contact main .container .line .loc-describe .list{
+  padding: 20px 0;
+  font-size: 14px;
+}
+.contact main .container .line .loc-describe .list li{
+  line-height: 44px;
+}
+.contact main .container .line .loc-describe .list li img{
+  margin-right: 5px;
+  height: 18px;
+  width: 18px;
+  vertical-align: sub;
+}
