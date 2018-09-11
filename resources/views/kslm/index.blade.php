@@ -146,7 +146,7 @@
                     <ul class="join-list clear font-0">
                         @foreach($partners as $partner)
                             <li class="text-center">
-                                <a href="{{ url('partner', ['id' => $partner->id]) }}">
+                                <a href="{{ url('cooperative', ['id' => $partner->id]) }}">
                                     <img src="{{ $partner->image }}" alt="{{ $partner->name }}">
                                 </a>
                             </li>
