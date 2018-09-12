@@ -22,5 +22,6 @@ Route::group([
         'partners' => 'PartnerController',
         'categories' => 'CategoryController',
         'products' => 'ProductController',
+        'messages' => 'MessageController',
     ]);
 });

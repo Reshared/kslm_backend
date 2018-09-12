@@ -60,9 +60,23 @@
     border-color: #00A0E9;
     background-color: #00A0E9;
   }
+  body .modal-dialog .modal-footer .btn.btn-confirm:hover {
+    border-color: rgba(0,160,233, 0.8);
+    background-color: rgba(0,160,233, 0.8);
+  }
   body .modal-dialog .modal-footer .btn.btn-cancel {
     color: #333;
     background-color: #ccc;
+  }
+  body .modal-dialog .modal-footer .btn.btn-cancel:hover {
+    background-color: rgba(204,204,204,0.8);
+  }
+  body .modal-dialog .form-container .form-control.error {
+    border-color: #ff0000;
+  }
+  body .modal-dialog .form-container .form-group p.co-red {
+    position: absolute;
+    font-size: 12px;
   }
   body .modal-dialog .form-container input,
   body .modal-dialog .form-container textarea {

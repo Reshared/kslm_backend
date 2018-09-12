@@ -23,3 +23,5 @@ Route::get('ajax/products', 'AjaxController@getProducts');
 Route::get('filter/{id}', 'ContentController@filter');
 Route::get('support/{id}', 'ContentController@support');
 Route::get('cooperative/{id}', 'ContentController@cooperative');
+
+Route::post('message', 'AjaxController@postMessage');

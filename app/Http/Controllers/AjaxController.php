@@ -12,6 +12,8 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\CategoryProductRelation;
 use App\Models\Product;
+use App\Models\Message;
+use App\Http\Requests\MessageRequest;
 
 class AjaxController extends Controller
 {
@@ -43,5 +45,14 @@ class AjaxController extends Controller
         }
 
         return response()->json($products);
+    }
+
+    public function postMessage(MessageRequest $request) 
+    {
+        Message::create($request->only([
+            'name', 'company', 'address', 'mobile', 'email', 'job', 'content', 'interest', 'area'
+        ]));
+
+        return redirect()->back()->with('msg', '留言成功');
     }
 }

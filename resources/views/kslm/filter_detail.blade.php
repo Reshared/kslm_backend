@@ -103,7 +103,8 @@
                                     <li>
                                         <a href="{{ url('support', ['id' => $release->id]) }}">
                                             <p class="title">
-                                                <span class="pos-re">{{ $release->title }}</span>
+                                                <span class="pos-re ellipsis">{{ $release->title }}</span>
+                                                <i class="support-line"></i>
                                             </p>
                                             <p class="row-ellipsis">{{ $release->description }}</p>
                                         </a>
