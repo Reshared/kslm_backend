@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Post extends Model
 {
@@ -25,5 +26,10 @@ class Post extends Model
     public function scopeByType($query, $type)
     {
         return $query->where('type', $type);
+    }
+
+    public function getCreatedAtAttribute($time) 
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $time)->toDateString();
     }
 }

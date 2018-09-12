@@ -34,6 +34,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -46,6 +48,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -58,6 +62,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -70,6 +76,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -82,6 +90,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -94,6 +104,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -106,6 +118,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -118,6 +132,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -130,6 +146,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -142,6 +160,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -154,6 +174,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -166,6 +188,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -178,6 +202,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -190,6 +216,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -202,6 +230,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -214,6 +244,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -226,6 +258,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -238,6 +272,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -250,6 +286,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -262,6 +300,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -274,6 +314,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -286,6 +328,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -298,6 +342,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -310,6 +356,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -322,6 +370,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -334,6 +384,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -346,6 +398,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -358,6 +412,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -370,6 +426,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'title' => '科氏滤膜将努力成为用户工程项目的参与者与合作伙伴',
                 'type' => rand(0, 2),
@@ -382,6 +440,8 @@ class PostSeeder extends Seeder
                 'is_stick' => rand(0, 1),
                 'content' => $faker->text(),
                 'clicks' => rand(0, 1000),
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],
         ]);
     }

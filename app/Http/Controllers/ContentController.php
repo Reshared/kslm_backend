@@ -51,9 +51,9 @@ class ContentController extends Controller
 
         $post->increment('clicks');
 
-        $next = Post::where('id', '>', $id)->orderBy('id')->first();
+        $next = Post::byType($post->type)->where('id', '>', $id)->orderBy('id')->first();
 
-        $pre = Post::where('id', '<', $id)->orderBy('id', 'desc')->first();
+        $pre = Post::byType($post->type)->where('id', '<', $id)->orderBy('id', 'desc')->first();
 
         return view('kslm.support_detail', compact('banners', 'post', 'pre', 'next'));
     }

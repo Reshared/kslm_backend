@@ -10,7 +10,9 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
 ], function (Router $router) {
 
-    $router->get('/', 'HomeController@index');
+    $router->get('/', function () {
+        return redirect('/backend/banners');
+    });
     $router->post('posts/stick', 'PostController@stick');
     $router->post('categories/sort', 'CategoryController@sort');
     $router->resources([

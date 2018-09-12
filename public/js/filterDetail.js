@@ -153,9 +153,14 @@ function loadProducts() {
             var html = '';
             var pagination = '';
             for (var o in res.data) {
-                html += '<li><div><a href="/filter/' + res.data[o].id + '?from=' + category_id + '"><img src="' + res.data[o].image + '"></a>' +
-                    '<p class="font-14">' + res.data[o].name + '</p>' +
-                    '<p class="co-main font-12">' + res.data[o].description + '</p>' +
+                var datum = res.data[o];
+                var categories = '';
+                for (var i in datum.categories) {
+                    categories += datum.categories[i].name + ' '
+                }
+                html += '<li><div><a href="/filter/' + datum.id + '?from=' + category_id + '"><img src="' + datum.image + '"></a>' +
+                    '<p class="font-14">' + datum.name + '</p>' +
+                    '<p class="co-main font-12">' + categories + '</p>' +
                     '</div></li>';
             }
 

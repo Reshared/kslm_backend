@@ -39,7 +39,7 @@ class IndexController extends Controller
 
         $categories = Category::whereIsRoot()->defaultOrder()->get();
 
-        $id = request('id', $categories->first()->id);
+        $id = request('id', 0);
 
         return view('kslm.filter', compact('banners', 'categories', 'id'));
     }

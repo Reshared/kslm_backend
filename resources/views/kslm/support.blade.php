@@ -26,15 +26,21 @@
         <main>
             <!-- tab切换 -->
             <ul class="tab bg-white tab">
-                <li class="@if($type == 0) active @endif animation-line pos-re">
-                    <a href="{{ url('support?type=0') }}">技术支持</a>
-                </li>
-                <li class="@if($type == 1) active @endif animation-line pos-re">
-                    <a href="{{ url('support?type=1') }}">服务与帮助</a>
-                </li>
-                <li class="@if($type == 2) active @endif animation-line pos-re">
-                    <a href="{{ url('support?type=2') }}">行业动态</a>
-                </li>
+                <a href="{{ url('support?type=0') }}">
+                    <li class="@if($type == 0) active @endif animation-line pos-re">
+                        技术支持
+                    </li>
+                </a>
+                <a href="{{ url('support?type=1') }}">
+                    <li class="@if($type == 1) active @endif animation-line pos-re">
+                        服务与帮助
+                    </li>
+                </a>
+                <a href="{{ url('support?type=2') }}">
+                    <li class="@if($type == 2) active @endif animation-line pos-re">
+                        行业动态
+                    </li>
+                </a>
             </ul>
             <div class="container">
                 <!-- 内容块 -->

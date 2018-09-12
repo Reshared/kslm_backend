@@ -216,6 +216,18 @@
                 </section>
             </div>
         </main>
+
+        <!-- 图片展示框 -->
+    <div class="modal fade exploded-view" tabindex="-1" role="dialog" id="explodedViewModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body pos-re">
+            <span class="pos-ab close-icon" data-dismiss="modal" aria-label="Close"></span>
+            <img src="./images/honor1.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
         <!-- 浮窗 -->
     @include('kslm.layouts.window')
     <!-- 在线留言 -->

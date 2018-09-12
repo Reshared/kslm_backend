@@ -32,10 +32,16 @@ class AjaxController extends Controller
 
     public function getProducts()
     {
-        $id = request('id', 1);
-        $ids = CategoryProductRelation::byCategory($id)->get()->pluck('product_id')->toArray();
+        $id = request('id', 0);
 
-        $products = Product::whereIn('id', $ids)->orderBy('sort')->select('id', 'name', 'description', 'image')->paginate();
+        if ($id == 0) {
+            $products = Product::orderBy('sort')->with('categories')->select('id', 'name', 'image')->paginate();
+        } else {
+            $ids = CategoryProductRelation::byCategory($id)->get()->pluck('product_id')->toArray();
+
+            $products = Product::whereIn('id', $ids)->orderBy('sort')->with('categories')->select('id', 'name', 'image')->paginate();
+        }
+
         return response()->json($products);
     }
 }
