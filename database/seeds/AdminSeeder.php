@@ -49,14 +49,22 @@ class AdminSeeder extends Seeder
             ], [
                 'parent_id' => 0,
                 'order' => 5,
-                'title' => '产品分类管理',
+                'title' => '主分类管理',
+                'icon' => 'fa-anchor',
+                'uri' => '/major_categories',
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
+            ],[
+                'parent_id' => 0,
+                'order' => 6,
+                'title' => '辅分类管理',
                 'icon' => 'fa-certificate',
                 'uri' => '/categories',
                 'created_at' => '2018-09-10 02:16:45',
                 'updated_at' => '2018-09-10 02:16:45',
             ], [
                 'parent_id' => 0,
-                'order' => 6,
+                'order' => 7,
                 'title' => '产品管理',
                 'icon' => 'fa-product-hunt',
                 'uri' => '/products',
@@ -64,7 +72,7 @@ class AdminSeeder extends Seeder
                 'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'parent_id' => 0,
-                'order' => 6,
+                'order' => 8,
                 'title' => '留言管理',
                 'icon' => 'fa-product-hunt',
                 'uri' => '/messages',
@@ -72,7 +80,7 @@ class AdminSeeder extends Seeder
                 'updated_at' => '2018-09-10 02:16:45',
             ],[
                 'parent_id' => 0,
-                'order' => 6,
+                'order' => 9,
                 'title' => '荣誉管理',
                 'icon' => 'fa-product-hunt',
                 'uri' => '/honors',
