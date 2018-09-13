@@ -62,6 +62,22 @@ class AdminSeeder extends Seeder
                 'uri' => '/products',
                 'created_at' => '2018-09-10 02:16:45',
                 'updated_at' => '2018-09-10 02:16:45',
+            ],[
+                'parent_id' => 0,
+                'order' => 6,
+                'title' => '留言管理',
+                'icon' => 'fa-product-hunt',
+                'uri' => '/messages',
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
+            ],[
+                'parent_id' => 0,
+                'order' => 6,
+                'title' => '荣誉管理',
+                'icon' => 'fa-product-hunt',
+                'uri' => '/honors',
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
             ],
         ]);
     }
