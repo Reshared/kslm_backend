@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Banner;
 use App\Models\Category;
+use App\Models\MajorCategory;
 use App\Models\Partner;
 use App\Models\Post;
 use App\Models\Product;
@@ -20,15 +21,9 @@ class ContentController extends Controller
 {
     public function filter($id)
     {
-        $from = request('from');
-
         $banners = Banner::orderBy('sort')->get();
 
-        $categories = Category::whereIsRoot()->defaultOrder()->get();
-
-        if (!$from) {
-            $from = $categories->first()->id;
-        }
+        $categories = MajorCategory::orderBy('sort', 'desc')->orderBy('created_at', 'desc')->get();
 
         $product = Product::findOrFail($id);
 
@@ -40,7 +35,7 @@ class ContentController extends Controller
 
         $releases = Post::whereIn('id', $ids)->get();
 
-        return view('kslm.filter_detail', compact('banners', 'categories', 'product', 'from', 'releases'));
+        return view('kslm.filter_detail', compact('banners', 'categories', 'product', 'releases'));
     }
 
     public function support($id)

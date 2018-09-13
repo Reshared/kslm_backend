@@ -13,7 +13,8 @@
     <script src="{{ asset('js/index.js') }}"></script>
     <script src="{{ asset('js/filterDetail.js') }}"></script>
     <script type="text/javascript">
-        var category_id = '{{ $id }}';
+        var category_id = '0';
+        var major_category_id = {{ $id }};
         var page = 1;
     </script>
 @stop
@@ -25,7 +26,7 @@
         <!-- 导航 -->
         @include('kslm.layouts.nav')
         <!-- 轮播图 -->
-        @include('kslm.layouts.carousel')
+        @include('kslm.layouts.image')
         <!-- 精准选型 -->
         <div class="modal fade precision-select" tabindex="-1" role="dialog" id="preSelectModal">
             <div class="modal-dialog" role="document">
@@ -63,7 +64,7 @@
                 <!-- 侧边栏 -->
                 <div class="side-bar">
                     <ul>
-                        @foreach($categories as $k => $category)
+                        @foreach($majorCategories as $k => $category)
                             <li data-id="{{ $category->id }}" class="clear @if($id == $category->id) active @endif" data-index="{{ $k + 1 }}">
                                 <a>
                                     <span>{{ $category->name }}</span>

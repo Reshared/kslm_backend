@@ -18,14 +18,16 @@
   margin: 0 10px;
   /* padding:10px; */
   box-sizing: border-box;
+  vertical-align: top;
   /* border: 1px dashed #ccc; */
 }
 .cooperative main .container .list-content li a.img-box{
   /* display: inline-block;
   width: 23%;
   margin:10px; */
-  display: inline-block;
-  padding:10px;
+  display: block;
+  height: 198px;
+  padding: 10px;
   box-sizing: border-box;
   border: 1px dashed #E3E3E7;
 }

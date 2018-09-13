@@ -19,9 +19,14 @@ class AjaxController extends Controller
 {
     public function getCategories()
     {
-        $id = request('id');
-        $category = Category::with('children')->findOrFail($id);
-        $childrens = $category->children;
+        $id = request('id', 0);
+        if (!$id) {
+            $childrens = Category::whereIsRoot()->defaultOrder()->get();
+        } else {
+            $category = Category::with('children')->findOrFail($id);
+            $childrens = $category->children;
+        }
+
         $arr = [];
         foreach ($childrens as $children) {
             $arr[] = [
@@ -34,20 +39,45 @@ class AjaxController extends Controller
 
     public function getProducts()
     {
-        $id = request('id', 0);
+        $majorCategoryId = request('mid', 0);
+        $categoryId = request('cid', 0);
 
-        if ($id == 0) {
-            $products = Product::orderBy('sort')->with('categories')->select('id', 'name', 'image')->paginate();
+        $categoryIds = [];
+
+        if ($categoryId) {
+            $categoryIds = explode(',', $categoryId);
+        }
+
+        if ($majorCategoryId == 0) {
+            if ($categoryIds) {
+                $products = Product::orderBy('sort')
+                    ->whereIn('category_id', $categoryIds)
+                    ->with('majorCategory')
+                    ->paginate();
+            } else {
+                $products = Product::orderBy('sort')
+                    ->with('majorCategory')
+                    ->paginate();
+            }
         } else {
-            $ids = CategoryProductRelation::byCategory($id)->get()->pluck('product_id')->toArray();
-
-            $products = Product::whereIn('id', $ids)->orderBy('sort')->with('categories')->select('id', 'name', 'image')->paginate();
+            if ($categoryIds) {
+                $products = Product::where('major_category_id', $majorCategoryId)
+                    ->whereIn('category_id', $categoryIds)
+                    ->orderBy('sort')
+                    ->with('majorCategory')
+                    ->paginate();
+            } else {
+                $products = Product::where('major_category_id', $majorCategoryId)
+                    ->orderBy('sort')
+                    ->with('majorCategory')
+                    ->paginate();
+            }
         }
 
         return response()->json($products);
     }
 
-    public function postMessage(MessageRequest $request) 
+    public function postMessage(MessageRequest $request)
     {
         Message::create($request->only([
             'name', 'company', 'address', 'mobile', 'email', 'job', 'content', 'interest', 'area'

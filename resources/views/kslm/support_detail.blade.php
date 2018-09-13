@@ -32,7 +32,7 @@
     <!-- 导航 -->
     @include('kslm.layouts.nav')
     <!-- 轮播图 -->
-    @include('kslm.layouts.carousel')
+    @include('kslm.layouts.image')
 
     <!-- 主要内容 -->
         <main class="text-container">

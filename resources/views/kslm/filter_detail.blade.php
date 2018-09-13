@@ -32,7 +32,7 @@
     <!-- 导航 -->
     @include('kslm.layouts.nav')
     <!-- 轮播图 -->
-    @include('kslm.layouts.carousel')
+    @include('kslm.layouts.image')
 
     <!-- 主要内容 -->
         <main class="bg-white">
@@ -50,7 +50,7 @@
                 <div class="side-bar">
                     <ul>
                         @foreach($categories as $k => $category)
-                            <li class="clear @if($from == $category->id) active @endif"
+                            <li class="clear @if($product['major_category_id'] == $category->id) active @endif"
                                 data-index="{{ $k + 1 }}">
                                 <a href="{{ url('filter?id='.$category->id) }}">
                                     <span>{{ $category->name }}</span>
@@ -76,8 +76,13 @@
                                             <div class="swiper-slide">
                                                 <ul>
                                                     <li><img src="{{ $image }}" alt=""></li>
-                                                    <li><img src="{{ $product['image_group'][$k+1] }}" alt=""></li>
-                                                    <li><img src="{{ $product['image_group'][$k+2] }}" alt=""></li>
+                                                    @if (isset($product['image_group'][$k+1]))
+                                                        <li><img src="{{ $product['image_group'][$k+1] }}" alt=""></li>
+                                                    @endif
+
+                                                    @if (isset($product['image_group'][$k+2]))
+                                                        <li><img src="{{ $product['image_group'][$k+2] }}" alt=""></li>
+                                                    @endif
                                                 </ul>
                                             </div>
                                         @endif

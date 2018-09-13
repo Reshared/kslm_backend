@@ -8,6 +8,10 @@ $(function () {
         loadCategory();
     });
 
+    $('#preSelectModal').on('hide.bs.modal', function () {
+        loadProducts();
+    });
+
     FilterDetail.prototype = {
         init: function () {
             this.swiper();
@@ -61,7 +65,9 @@ $(function () {
             _sideBarItem.on('click', function () {
                 _sideBarItem.removeClass('active');
                 $(this).addClass('active');
-                category_id = $(this).attr('data-id');
+                major_category_id = $(this).attr('data-id');
+                category_id = 0;
+                $('.recommend-list-container').empty();
                 loadProducts();
             });
         },
@@ -116,19 +122,21 @@ function loadNextCategory(obj) {
 }
 
 function loadCategory() {
-    $.ajax({
-        url: '/ajax/categories',
-        method: 'get',
-        data: {id: category_id},
-        success: function (res) {
-            var html = '<ul data-level="1" class="level1">';
-            for (var o in res.data) {
-                html += '<li data-id="' + res.data[o].id + '" onclick="focusThis(this)">' + res.data[o].name + '</li>';
+    if (!category_id) {
+        $.ajax({
+            url: '/ajax/categories',
+            method: 'get',
+            data: {id: category_id},
+            success: function (res) {
+                var html = '<ul data-level="1" class="level1">';
+                for (var o in res.data) {
+                    html += '<li data-id="' + res.data[o].id + '" onclick="focusThis(this)">' + res.data[o].name + '</li>';
+                }
+                html += '</ul>';
+                $('.recommend-list-container').html(html);
             }
-            html += '</ul>';
-            $('.recommend-list-container').html(html);
-        }
-    })
+        })
+    }
 }
 
 function focusThis(item) {
@@ -145,22 +153,23 @@ function loadNextProduct(p) {
 }
 
 function loadProducts() {
+    category_id = 0;
+    $('#preSelectModal .recommend-list-container').find('.active').each(function () {
+        category_id += ',' + $(this).attr('data-id');
+    });
+    console.log(category_id);
     $.ajax({
         url: '/ajax/products',
         method: 'get',
-        data: {id: category_id, page: page},
+        data: {mid: major_category_id, cid: category_id, page: page},
         success: function (res) {
             var html = '';
             var pagination = '';
             for (var o in res.data) {
                 var datum = res.data[o];
-                var categories = '';
-                for (var i in datum.categories) {
-                    categories += datum.categories[i].name + ' '
-                }
-                html += '<li><div><a href="/filter/' + datum.id + '?from=' + category_id + '"><img src="' + datum.image + '"></a>' +
-                    '<p class="font-14">' + datum.name + '</p>' +
-                    '<p class="co-main font-12">' + categories + '</p>' +
+                html += '<li><div><a href="/filter/' + datum.id + '"><img src="' + datum.image + '"></a>' +
+                    '<p class="font-14 row-ellipsis">' + datum.name + '</p>' +
+                    '<p class="co-main font-12 ellipsis">' + datum.major_category.name + '</p>' +
                     '</div></li>';
             }
 

@@ -11,7 +11,7 @@
   body .modal button.close:hover,
   body .modal button.close span:focus,
   body .modal button.close span:hover,
-  body .modal button.close span:active, {
+  body .modal button.close span:active {
     outline: none;
     border: none;
     box-shadow: none;
@@ -97,7 +97,7 @@
     margin-top: 9px;
     font-size: 0;
   }
-  body .modal-dialog .checkbox-list li:nth(3n - 1) {
+  body .modal-dialog .checkbox-list li:nth-child(3n - 1) {
     margin: 0 5%;
   }
   body .modal-dialog .checkbox-list li {
@@ -177,6 +177,14 @@
     margin-right: 20px;
   }
   /* 图片展示框 */
+  body .exploded-view .modal-dialog {
+    position: absolute;
+    height: 612px;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -306px;
+  }
   body .exploded-view .modal-body {
     padding: 54px;
     line-height: 1;

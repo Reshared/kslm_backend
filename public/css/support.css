@@ -36,6 +36,8 @@
   cursor: pointer;
 }
 .support main .container .list-container .list-content li .item img {
+  width: 200px;
+  height: 140px;
   vertical-align: top;
 }
 .support main .container .list-container .list-content li .item a{
