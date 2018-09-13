@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 
 use App\Models\Category;
+use App\Models\MajorCategory;
 
 class CategorySeeder extends Seeder
 {
@@ -13,13 +14,36 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $root = Category::create(['name' => '反渗透膜']);
-        Category::create(['name' => '水净化用纳滤膜']);
-        Category::create(['name' => '水净化超滤膜']);
+        MajorCategory::insert([
+            [
+                'name' => '反渗透膜',
+                'sort' => 4,
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
+            ], [
+                'name' => '水净化用纳滤膜',
+                'sort' => 3,
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
+            ], [
+                'name' => '水净化超滤膜',
+                'sort' => 2,
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
+            ], [
+                'name' => '物料分离膜',
+                'sort' => 1,
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
+            ], [
+                'name' => '电泳漆超滤膜',
+                'sort' => 0,
+                'created_at' => '2018-09-10 02:16:45',
+                'updated_at' => '2018-09-10 02:16:45',
+            ],
+        ]);
+        Category::create(['name' => '水净化用膜']);
         Category::create(['name' => '物料分离膜']);
-        Category::create(['name' => '电泳漆超滤膜']);
-        $root->children()->create(['name' => '水净化用膜']);
-        $root->children()->create(['name' => '物料分离膜']);
         $root1 = Category::where('name', '水净化用膜')->first();
         $root1->children()->create(['name' => '按精度分']);
         $root1->children()->create(['name' => '按用途分']);

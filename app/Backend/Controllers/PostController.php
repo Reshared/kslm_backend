@@ -34,6 +34,7 @@ class PostController extends Controller
     public function grid()
     {
         return Admin::grid(Post::class, function (Grid $grid) {
+            $grid->model()->orderBy('is_stick', 'desc')->orderBy('sort', 'desc')->orderBy('created_at', 'desc');
             $grid->column('id', 'ID');
             $grid->column('created_at', '发布时间')->style('width: 150px');;
             $grid->column('title', '名称')->style('max-width: 250px');
@@ -71,7 +72,7 @@ class PostController extends Controller
             $form->text('seo_description', 'description')->rules('max:255');
             $form->image('image', '图片上传')->uniqueName();
             $form->number('sort', '排序值');
-            $form->editor('content', '图文详情');
+            $form->editor('content', '图文详情')->rules('required');
         });
     }
 

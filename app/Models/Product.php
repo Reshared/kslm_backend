@@ -41,9 +41,14 @@ class Product extends Model
         }
     }
 
-    public function categories()
+    public function majorCategory()
     {
-        return $this->belongsToMany(Category::class, 'category_product_relations');
+        return $this->belongsTo(MajorCategory::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 
     public function posts()

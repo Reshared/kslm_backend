@@ -52,8 +52,8 @@ class PageController extends Controller
             $form->text('seo_title', 'title')->rules('max:255');
             $form->text('seo_keywords', 'keywords')->rules('max:255');
             $form->text('seo_description', 'description')->rules('max:255');
-            $form->textarea('description', '描述')->rules('max:255');
-            $form->editor('content', '图文详情');
+            $form->textarea('description', '描述');
+            $form->editor('content', '图文详情')->rules('required');
         });
     }
 

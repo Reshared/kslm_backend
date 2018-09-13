@@ -22,9 +22,13 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid\Column;
 use App\Backend\Extensions\WangEditor;
 use App\Backend\Extensions\Post\StickAction;
+use App\Backend\Extensions\Message\DealAction;
+use App\Backend\Extensions\Message\ViewAction;
 use App\Backend\Extensions\Category\SortAction;
 
 Encore\Admin\Form::forget(['map', 'editor']);
 Form::extend('editor', WangEditor::class);
 Column::extend('StickAction', StickAction::class);
+Column::extend('DealAction', DealAction::class);
+Column::extend('ViewAction', ViewAction::class);
 Column::extend('SortAction', SortAction::class);

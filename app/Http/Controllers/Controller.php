@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\MajorCategory;
 use App\Models\Post;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -25,6 +26,16 @@ class Controller extends BaseController
             $cateArr[$category->id] = $prefix . $category->name;
         }
         return $cateArr;
+    }
+
+    protected function majorCategories()
+    {
+        $majorCategories = MajorCategory::get();
+        $majorArr = [];
+        foreach ($majorCategories as $category) {
+            $majorArr[$category->id] = $category->name;
+        }
+        return $majorArr;
     }
 
     protected function posts()

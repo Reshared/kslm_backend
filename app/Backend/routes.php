@@ -14,12 +14,15 @@ Route::group([
         return redirect('/backend/banners');
     });
     $router->post('posts/stick', 'PostController@stick');
+    $router->post('messages/deal', 'MessageController@deal');
     $router->post('categories/sort', 'CategoryController@sort');
     $router->resources([
         'banners' => 'BannerController',
+        'honors' => 'HonorController',
         'posts' => 'PostController',
         'pages' => 'PageController',
         'partners' => 'PartnerController',
+        'major_categories' => 'MajorCategoryController',
         'categories' => 'CategoryController',
         'products' => 'ProductController',
         'messages' => 'MessageController',

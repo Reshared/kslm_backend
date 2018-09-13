@@ -24,6 +24,7 @@ class CreateMessagesTable extends Migration
             $table->text('content');
             $table->string('interest');
             $table->string('area');
+            $table->boolean('deal')->default(false);
             $table->timestamps();
         });
     }

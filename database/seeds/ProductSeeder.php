@@ -3,6 +3,8 @@
 use Illuminate\Database\Seeder;
 
 use Illuminate\Support\Facades\DB;
+use App\Models\MajorCategory;
+use App\Models\Category;
 
 class ProductSeeder extends Seeder
 {
@@ -15,6 +17,9 @@ class ProductSeeder extends Seeder
     {
         $faker = app(Faker\Generator::class);
 
+        $majorIds = MajorCategory::all()->pluck('id')->toArray();
+        $categoryIds = Category::all()->pluck('id')->toArray();
+
         $images = [
             'http://pevb27s43.bkt.clouddn.com/detail1.png',
             'http://pevb27s43.bkt.clouddn.com/detail2.png',
@@ -24,6 +29,8 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             [
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -35,6 +42,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -46,6 +55,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -57,6 +68,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -68,6 +81,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -79,6 +94,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -90,6 +107,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -101,6 +120,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -112,6 +133,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -123,6 +146,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -134,6 +159,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -145,6 +172,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -156,6 +185,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -167,6 +198,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
@@ -178,6 +211,8 @@ class ProductSeeder extends Seeder
                 'clicks' => rand(0, 1000),
             ],[
                 'name' => 'KOCH-SR100系列纳滤膜',
+                'major_category_id' => array_random($majorIds),
+                'category_id' => array_random($categoryIds),
                 'description' => $faker->text(),
                 'seo_title' => '这里是seo标题',
                 'seo_keywords' => '这里是seo关键词',
