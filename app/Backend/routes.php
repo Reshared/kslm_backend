@@ -13,6 +13,7 @@ Route::group([
     $router->get('/', function () {
         return redirect('/backend/banners');
     });
+    $router->post('upload', 'UploadController@uploadImg');
     $router->post('posts/stick', 'PostController@stick');
     $router->post('messages/deal', 'MessageController@deal');
     $router->post('categories/sort', 'CategoryController@sort');

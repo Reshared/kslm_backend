@@ -58,7 +58,7 @@ class ProductController extends Controller
             $form->text('seo_keywords', 'keywords')->rules('max:255');
             $form->text('seo_description', 'description')->rules('max:255');
             $form->image('image', '封面图')->uniqueName()->rules('required');
-            $form->multipleImage('image_group', '产品组图')->uniqueName()->rules('required')->help('请一次性选择，新的选择将会替换已选图片');
+            $form->multipleImage('image_group', '产品组图')->uniqueName()->removable();
             $form->number('sort', '序号值');
             $form->listbox('posts', '关联文章')->options($postArr)->help('左侧为待选资讯列表；右侧为已关联资讯列表');
             $form->editor('content', '产品详情')->rules('required');
