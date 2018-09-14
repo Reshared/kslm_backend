@@ -30,7 +30,7 @@ class IndexController extends Controller
             ->get()
             ->toArray();
 
-        $partners = Partner::isRecommend()->orderBy('sort')->orderBy('created_at', 'desc')->take(5)->get();
+        $partners = Partner::isRecommend()->orderBy('sort', 'desc')->orderBy('created_at', 'desc')->take(5)->get();
 
         return view('kslm.index', compact('posts', 'partners', 'banners'));
     }

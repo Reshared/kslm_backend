@@ -212,7 +212,8 @@
   margin-top: 20px;
 }
 .joint-venture .container .joint-content .join-list li{
-  width: calc(20% - 3px);
+  width: 20%;
+  padding: 0 10px;
   display: inline-block;
   box-sizing: border-box;
   margin-top: 10px;
@@ -221,5 +222,6 @@
   display: block;
 }
 .joint-venture .container .joint-content .join-list li a img {
+  width: 100%;
   height: 100%;
 }

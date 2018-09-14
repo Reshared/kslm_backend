@@ -56,7 +56,7 @@ class CategoryController extends Controller
         $cateArr = $this->categories();
         return Admin::form(Category::class, function (Form $form) use ($cateArr) {
             $form->select('parent_id', '上级分类')->options($cateArr);
-            $form->text('name', '分类名称')->rules('required|max:15');
+            $form->text('name', '分类名称')->rules('required|max:150');
         });
     }
 

@@ -218,6 +218,7 @@ $(function () {
             method: 'post',
             success: function(res) {
               alert('留言成功！');
+              $('#formReset').click();
               $('#olMessageModal').modal('hide');
             },
             error: function() {

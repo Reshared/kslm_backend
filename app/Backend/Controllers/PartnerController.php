@@ -31,6 +31,7 @@ class PartnerController extends Controller
     public function grid()
     {
         return Admin::grid(Partner::class, function (Grid $grid) {
+            $grid->model()->orderBy('sort', 'desc')->orderBy('created_at', 'desc');
             $grid->column('id', 'ID');
             $grid->column('name', '企业名称');
             $grid->column('sort', '排序值');

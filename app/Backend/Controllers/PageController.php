@@ -39,9 +39,6 @@ class PageController extends Controller
             $grid->disableRowSelector();
             $grid->disableExport();
             $grid->disableFilter();
-            $grid->actions(function (Grid\Displayers\Actions $actions) {
-                $actions->prepend('<a target="_blank" href="/pages/' . $actions->getKey() . '"><i class="fa fa-eye"></i></a>');
-            });
         });
     }
 

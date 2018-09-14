@@ -10,11 +10,10 @@
                                                             data-locale="header_contact_us">联系我们</span></a>
             </li>
             <li class="fl pos-re weChart-item">
-                <p class="weChart-text"><i></i><span class="animation-line"
-                                                     data-locale="header_weChart">微信</span></p>
+                <p class="weChart-text"><i></i><span class="animation-line" data-locale="header_weChart">微信</span></p>
                 <b class="weChart-arrow pos-ab animated"></b>
                 <div class="weChart-img pos-ab animated">
-                    <img src="{{ asset('images/weChat.png') }}" alt="微信">
+                    <img src="{{ asset('images/weChat11.png') }}" alt="微信">
                 </div>
             </li>
         </ul>

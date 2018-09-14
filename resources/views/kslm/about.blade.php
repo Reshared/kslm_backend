@@ -83,7 +83,7 @@
                     <h3 class="text-center about-title">公司荣誉</h3>
                     <ul class="honor-list bg-white">
                         @foreach($honors as $honor)
-                        <li class="mar-5 text-center">
+                        <li class="text-center">
                             <img src="{{ $honor->image }}" alt="{{ $honor->name }}">
                         </li>
                         @endforeach

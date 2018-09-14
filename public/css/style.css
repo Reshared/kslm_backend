@@ -279,7 +279,7 @@ body .container {
   margin-top: 8px;
   margin-left: -52px;
   line-height: 1;
-  padding: 10px;
+  /* padding: 10px; */
   background-color: #fff;
   border-radius: 4px;
   background-size: cover;
@@ -287,8 +287,8 @@ body .container {
 }
 
 .header .header-container .weChart-img img {
-  width: 133px;
-  height: 133px;
+  width: 153px;
+  height: 153px;
 }
 
 /* 导航 */
@@ -395,7 +395,6 @@ body .container {
   height: 82px;
   margin: 20px 0;
   line-height: 1;
-  padding: 3px;
 }
 
 .footer .container .top .wechart-img img {
