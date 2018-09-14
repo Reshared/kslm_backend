@@ -8,8 +8,13 @@ $(function () {
         loadCategory();
     });
 
-    $('#preSelectModal').on('hide.bs.modal', function () {
-        loadProducts();
+    $('#confirm_filter').click(function () {
+        if ($('.im_product.active').length > 0) {
+            window.location.href = '/filter/' + $('.im_product.active').attr('data-id');
+        } else {
+            loadProducts();
+        }
+        $('#preSelectModal').modal('hide');
     });
 
     FilterDetail.prototype = {
@@ -101,18 +106,30 @@ function loadNextCategory(obj) {
                 if ($('.level' + level).length === 0) {
                     var html = '<ul data-level="' + level + '" class="level' + level + '">';
                     for (var o in res.data) {
-                        html += '<li data-id="' +
-                            res.data[o].id + '" onclick="focusThis(this)">' +
-                            res.data[o].name + '</li>';
+                        if (res.data[o].product) {
+                            html += '<li class="im_product" data-id="' +
+                                res.data[o].id + '" onclick="justFocusThis(this)">' +
+                                res.data[o].name + '</li>';
+                        } else {
+                            html += '<li data-id="' +
+                                res.data[o].id + '" onclick="focusThis(this)">' +
+                                res.data[o].name + '</li>';
+                        }
                     }
                     html += '</ul>';
                     $(obj).parent('ul').after(html);
                 } else {
                     var html = '';
                     for (var o in res.data) {
-                        html += '<li data-id="' +
-                            res.data[o].id + '" onclick="focusThis(this)">' +
-                            res.data[o].name + '</li>';
+                        if (res.data[o].product) {
+                            html += '<li class="im_product" data-id="' +
+                                res.data[o].id + '" onclick="justFocusThis(this)">' +
+                                res.data[o].name + '</li>';
+                        } else {
+                            html += '<li data-id="' +
+                                res.data[o].id + '" onclick="focusThis(this)">' +
+                                res.data[o].name + '</li>';
+                        }
                     }
                     $('.level' + level).html(html);
                 }
@@ -147,6 +164,13 @@ function focusThis(item) {
     }
 }
 
+function justFocusThis(item) {
+    if (!$(item).hasClass('active')) {
+        $(item).parent('ul').find('.active').removeClass('active');
+        $(item).addClass('active');
+    }
+}
+
 function loadNextProduct(p) {
     page = p;
     loadProducts();
@@ -157,7 +181,6 @@ function loadProducts() {
     $('#preSelectModal .recommend-list-container').find('.active').each(function () {
         category_id += ',' + $(this).attr('data-id');
     });
-    console.log(category_id);
     $.ajax({
         url: '/ajax/products',
         method: 'get',

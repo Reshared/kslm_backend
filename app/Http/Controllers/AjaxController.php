@@ -20,19 +20,27 @@ class AjaxController extends Controller
     public function getCategories()
     {
         $id = request('id', 0);
+        $isCategory = false;
         if (!$id) {
             $childrens = Category::whereIsRoot()->defaultOrder()->get();
+            $isCategory = true;
         } else {
-            $category = Category::with('children')->findOrFail($id);
-            $childrens = $category->children;
+            //优先尝试获取产品
+            $childrens = Product::byCategory($id)->get();
+            if (count($childrens) <= 0) {
+                $category = Category::with('children')->findOrFail($id);
+                $childrens = $category->children;
+                $isCategory = true;
+            }
         }
-
         $arr = [];
         foreach ($childrens as $children) {
-            $arr[] = [
+            $tmp = [
                 'id' => $children->id,
                 'name' => $children->name,
             ];
+            $tmp['product'] = !$isCategory;
+            $arr[] = $tmp;
         }
         return response()->json(['ok' => true, 'data' => $arr]);
     }

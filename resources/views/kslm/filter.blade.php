@@ -13,7 +13,7 @@
     <script src="{{ asset('js/index.js') }}"></script>
     <script src="{{ asset('js/filterDetail.js') }}"></script>
     <script type="text/javascript">
-        var category_id = '0';
+        var category_id = 0;
         var major_category_id = {{ $id }};
         var page = 1;
     </script>
@@ -40,6 +40,9 @@
                         <h3 class="co-main text-center">产品选型精准推荐</h3>
                         <div class="recommend-list-container">
                         </div>
+                    </div>
+                    <div class="modal-footer" style="width: 99%;">
+                        <button type="button" class="btn btn-primary" id="confirm_filter">确认</button>
                     </div>
                 </div>
             </div>

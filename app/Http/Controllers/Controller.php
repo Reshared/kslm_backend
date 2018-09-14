@@ -14,11 +14,20 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    protected function categories()
+    protected function categories($noProduct = false)
     {
-        $categories = Category::withDepth()->defaultOrder()->get();
+        if ($noProduct) {
+            $categories = Category::withDepth()->defaultOrder()->withCount('products')->get();
+        } else {
+            $forbidIds = Category::hasChildren()->get()->pluck('id')->toArray();
+            $categories = Category::withDepth()->defaultOrder()->whereNotIn('id', $forbidIds)->get();
+        }
         $cateArr = [];
         foreach ($categories as $category) {
+            if ($noProduct && $category->products_count > 0) {
+                continue;
+            }
+
             $prefix = '|—';
             for ($i = 0; $i < $category->depth; $i++) {
                 $prefix .= '——';

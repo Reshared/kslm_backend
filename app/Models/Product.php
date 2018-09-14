@@ -55,4 +55,9 @@ class Product extends Model
     {
         return $this->belongsToMany(Post::class, 'product_post_relations');
     }
+
+    public function scopeByCategory($query, $cid)
+    {
+        return $query->where('category_id', $cid);
+    }
 }
