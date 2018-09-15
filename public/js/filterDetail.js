@@ -148,7 +148,7 @@ function loadNextCategory(obj) {
                     }
                     $('.level' + level).html(html);
                 }
-                resizeContainer()
+                // resizeContainer()
             }
         }
     })
@@ -196,8 +196,11 @@ function resizeContainer() {
     var _ulItem = $('#preSelectModal').find('.recommend-list-container ul');
     var _width = (_ulItem.length - 1) * 30 + 172;
     for (var i = 0; i < _ulItem.length; i++) {
+        if(i == 2) console.log(($(_ulItem).eq(i))[0].css('width'));
+        console.log(($(_ulItem).eq(i))[0].offsetWidth);
         _width += ($(_ulItem).eq(i))[0].offsetWidth;
     }
+    // console.log(_width);
     $('#preSelectModal').find('.recommend-list-container').css({
         width: _width + 'px'
     })

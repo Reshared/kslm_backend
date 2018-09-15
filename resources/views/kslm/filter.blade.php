@@ -39,7 +39,7 @@
                     <div class="modal-body">
                         <h3 class="co-main text-center">产品选型精准推荐</h3>
                         <div class="recommend-container">
-                            <div class="recommend-list-container" style="min-width: 100%;">
+                            <div class="recommend-list-container" style="min-width:100%">
                             </div>
                         </div>
                     </div>
