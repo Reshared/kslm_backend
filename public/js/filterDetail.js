@@ -46,20 +46,35 @@ $(function () {
                 slidesPerView: 'auto',
                 autoplayDisableOnInteraction: false,
                 mousewheelControl: true,
-                autoHeight: true,
+                height: 90,
                 grabCursor: true
             });
+
+            // 初始化详情图
+            var _initSrc = $('.pic-group-swiper .swiper-slide:eq(0)').find('img').attr('src');
+            $('.detail-containter .detail-img').find('img').attr({src: _initSrc});
+
             $('.pic-prev').on('click', function () {
                 picSwiper.slidePrev();
+                var _activeIndex = picSwiper.activeIndex;
+                console.log(picSwiper.activeIndex);
+                var _src = $('.pic-group-swiper .swiper-slide').eq(_activeIndex).find('img').attr('src');
+                console.log(_src);
+                $('.detail-containter .detail-img').find('img').attr({src: _src});
             })
             $('.pic-next').on('click', function () {
                 picSwiper.slideNext();
+                var _activeIndex = picSwiper.activeIndex;
+                console.log(picSwiper.activeIndex);
+                var _src = $('.pic-group-swiper .swiper-slide').eq(_activeIndex).find('img').attr('src');
+                console.log(_src);
+                $('.detail-containter .detail-img').find('img').attr({src: _src});
             })
 
-            var _sildeItem = $('.pic-group-swiper .swiper-slide').find('li');
+            var _sildeItem = $('.pic-group-swiper .swiper-slide').find('img');
             var _showPic = $('.detail-containter .detail-img').find('img');
             _sildeItem.on('click', function () {
-                var _picSrc = $(this).find('img').attr('src');
+                var _picSrc = $(this).attr('src');
                 _showPic.attr({src: _picSrc});
             })
         },

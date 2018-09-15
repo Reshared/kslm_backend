@@ -71,21 +71,10 @@
                             <span class="pic-prev pic-control">向上</span>
                             <div class="pic-group-swiper swiper-container">
                                 <div class="pic-swiper-wrapper swiper-wrapper">
-                                    @foreach($product['image_group'] as $k => $image)
-                                        @if ($k%3 == 0)
-                                            <div class="swiper-slide">
-                                                <ul>
-                                                    <li><img src="{{ $image }}" alt=""></li>
-                                                    @if (isset($product['image_group'][$k+1]))
-                                                        <li><img src="{{ $product['image_group'][$k+1] }}" alt=""></li>
-                                                    @endif
-
-                                                    @if (isset($product['image_group'][$k+2]))
-                                                        <li><img src="{{ $product['image_group'][$k+2] }}" alt=""></li>
-                                                    @endif
-                                                </ul>
-                                            </div>
-                                        @endif
+                                    @foreach($product['image_group'] as $image)
+                                        <div class="swiper-slide">
+                                            <img src="{{ $image }}" alt="">
+                                        </div>
                                     @endforeach
                                 </div>
                             </div>
