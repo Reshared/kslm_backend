@@ -62,11 +62,11 @@ class IndexController extends Controller
 
     public function about()
     {
-        $introduce = Page::where('description', 'introduce')->first();
+        $introduce = Page::find(1);
 
-        $image = Page::where('description', 'image')->first();
+        $image = Page::find(2);
 
-        $jobs = Page::where('description', 'jobs')->first();
+        $jobs = Page::find(3);
 
         $honors = Honor::orderBy('sort', 'desc')->orderBy('created_at', 'desc')->get();
 
