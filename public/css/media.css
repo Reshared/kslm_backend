@@ -132,6 +132,10 @@
   body .precision-select .modal-dialog {
     width: 1200px;
   }
+  body .precision-select .recommend-container {
+    width: 100%;
+    overflow-x: scroll;
+  }
   body .precision-select .recommend-list-container {
     padding: 40px 36px;
   }

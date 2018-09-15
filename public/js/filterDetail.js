@@ -148,6 +148,7 @@ function loadNextCategory(obj) {
                     }
                     $('.level' + level).html(html);
                 }
+                resizeContainer()
             }
         }
     })
@@ -189,6 +190,17 @@ function justFocusThis(item) {
 function loadNextProduct(p) {
     page = p;
     loadProducts();
+}
+
+function resizeContainer() {
+    var _ulItem = $('#preSelectModal').find('.recommend-list-container ul');
+    var _width = (_ulItem.length - 1) * 30 + 172;
+    for (var i = 0; i < _ulItem.length; i++) {
+        _width += ($(_ulItem).eq(i))[0].offsetWidth;
+    }
+    $('#preSelectModal').find('.recommend-list-container').css({
+        width: _width + 'px'
+    })
 }
 
 function loadProducts() {
