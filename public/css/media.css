@@ -134,7 +134,7 @@
   }
   body .precision-select .recommend-container {
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
   body .precision-select .recommend-list-container {
     padding: 40px 36px;
