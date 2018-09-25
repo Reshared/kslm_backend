@@ -35,24 +35,24 @@
             content: "科氏（北京）滤膜科技有限公司"
         });
 
-        var map1 = new AMap.Map('map1', {
-            resizeEnable: true,
-            center: [116.314955, 39.675723],
-            zoom: 16
-        });
-        var marker1 = new AMap.Marker({
-            position: map1.getCenter(),
-            icon: 'https://webapi.amap.com/theme/v1.3/markers/n/mark_b1.png',
-        });
-        marker1.setMap(map1);
-        // 设置鼠标划过点标记显示的文字提示
-        marker1.setTitle('科氏（北京）滤膜科技有限公司');
-
-        // 设置label标签
-        marker1.setLabel({//label默认蓝框白底左上角显示，样式className为：amap-marker-label
-            offset: new AMap.Pixel(-93, -48),//修改label相对于maker的位置
-            content: "科氏（北京）滤膜科技有限公司"
-        });
+        // var map1 = new AMap.Map('map1', {
+        //     resizeEnable: true,
+        //     center: [116.314955, 39.675723],
+        //     zoom: 16
+        // });
+        // var marker1 = new AMap.Marker({
+        //     position: map1.getCenter(),
+        //     icon: 'https://webapi.amap.com/theme/v1.3/markers/n/mark_b1.png',
+        // });
+        // marker1.setMap(map1);
+        // // 设置鼠标划过点标记显示的文字提示
+        // marker1.setTitle('科氏（北京）滤膜科技有限公司');
+        //
+        // // 设置label标签
+        // marker1.setLabel({//label默认蓝框白底左上角显示，样式className为：amap-marker-label
+        //     offset: new AMap.Pixel(-93, -48),//修改label相对于maker的位置
+        //     content: "科氏（北京）滤膜科技有限公司"
+        // });
     </script>
 @stop
 

@@ -75,7 +75,7 @@
                 </section>
 
                 <section class="list-container clear factory-container hide">
-                    <h3 class="co-000 text-center about-title">{{ $image->title }}</h3>
+                    <h3 class="co-000 text-center about-title lm-title">{{ $image->title }}</h3>
                     {!! $image->content !!}
                 </section>
 

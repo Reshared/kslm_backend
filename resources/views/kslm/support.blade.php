@@ -65,7 +65,7 @@
                         @endforeach
                     </ul>
                     <!-- 分页 -->
-                    <div aria-label="Page navigation" class="fr">
+                    <div aria-label="Page navigation" class="fr pagination-container">
                         <ul class="pagination">
                             @for($i = 1; $i <= $posts->lastPage(); $i++)
                                 @if($posts->currentPage() == $i)

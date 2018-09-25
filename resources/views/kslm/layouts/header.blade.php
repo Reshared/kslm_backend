@@ -2,12 +2,12 @@
 <header class="lm-header">
     <div class="lm-header-container lm-container clear">
         <a href="{{ url('/') }}" class="logo-container fl">
-            <img class="logo" src="{{ 'images/logo.png' }}" alt="logo"/>
+            <img class="logo" src="{{ asset('images/logo.png') }}" alt="logo"/>
         </a>
         <div class="fr">
             <p><span class="pos-re">中文</span></p>
             <!-- <i class="lm-icon"></i> -->
-            <img src="{{ 'images/icon-lm-nav.png' }}">
+            <img src="{{ asset('images/icon-lm-nav.png') }}">
         </div>
     </div>
 </header>

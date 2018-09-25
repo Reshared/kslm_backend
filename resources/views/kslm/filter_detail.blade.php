@@ -64,6 +64,15 @@
                 <!-- 详情内容 -->
                 <section class="list-container detail-containter">
                     <div class="detail-header">
+                        <div class="detail-swiper-container swiper-container">
+                            <div class="detail-swiper-wrapper swiper-wrapper">
+                                @foreach($product['image_group'] as $image)
+                                    <div class="swiper-slide">
+                                        <img src="{{ $image }}" alt="">
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
                         <div class="detail-img">
                             <img src="{{ $product['image'] }}">
                         </div>
