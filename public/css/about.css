@@ -1,3 +1,6 @@
+.about main {
+  background-color: #f9f9f9;
+}
 .about main .tab{
   border-bottom: 1px solid #aaa;
   text-align: center;
@@ -26,8 +29,9 @@
 /* .about main .tab li.active {
   border-bottom: 1px solid #333;
 } */
-.about main .container .list-container .padding-30{
+.about main .container .list-container .padding-30 {
   padding: 30px;
+  font-size: 14px;
 }
 .about main .container .list-container .des-img{
   width: 100%;
@@ -106,6 +110,98 @@
 .about main .container .list-container .job-content .item .text .line{
   line-height: 26px;
 }
+.about main .container .list-container .job-content .item .text .lm-show{
+  display: none;
+}
 .about main .container .list-container .job-content .item .text .mar-r-20{
   margin-right:20px;
+}
+
+@media (max-width: 768px) {
+  .about main .tab {
+    margin-bottom: 0;
+    border: none;
+    padding: 0.4rem 0 0;
+  }
+  .about main .tab li{
+    width: 22%;
+    border: 1px solid #ccc;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.32rem;
+    margin: 10px 2px;
+    color: #aaa;
+    box-sizing: border-box;
+  }
+  .about main .tab li.active{
+    border-color: #00A0E9;
+    color:#00A0E9;
+  }
+  .about main .tab li.active:after, .about main .tab li.active:before{
+    display: none;
+  }
+  .container .about-title{
+    margin: 0;
+    padding: 0.8rem 0 0.8rem 0;
+    background-color: #fff;
+    font-size: 20px;
+  }
+  .container .about-title.lm-title{
+    display: none;
+  }
+  .about main .container .list-container .padding-30{
+    padding: 0 0.4rem;
+    font-size: 0.32rem;
+  }
+  .about main .container .list-container .bottom-list li{
+    border:none;
+    background-color: transparent;
+    padding: 0 0.5rem;
+  }
+  .about main .container .list-container .bottom-list li .text{
+    font-size: 0.3733rem;
+  }
+  .about main .container .list-container .bottom-list li img{
+    width: 100%;
+  }
+  /* 荣誉资质 */
+  .about main .container .list-container .honor-list,
+  .about main .container .list-container .job-content {
+    padding: 0.8rem 0.4rem;
+  }
+  .about main .container .list-container .honor-list li{
+    width: 49%;
+  }
+  .about main .container .list-container .honor-list li:nth-child(odd){
+    margin-right: 2%;
+  }
+  .about main .container .list-container .honor-list li:nth-child(even){
+    margin-right: 0;
+  }
+  .about main .container .list-container .honor-list li img{
+    width: 100%;
+  }
+  /* 实景图 */
+  .about main .container .factory-container img{
+    width: 100%;
+  }
+  /* 招聘 */
+  .about main .container .list-container .job-content .item {
+    font-size: 0.3733rem;
+  }
+  .about main .container .list-container .job-content .item .title{
+    padding-left: 10px;
+  }
+  .about main .container .list-container .job-content .item .text{
+    padding-left: 0;
+  }
+  .about main .container .list-container .job-content .item .text .lm-block{
+    display: block;
+  }
+  .about main .container .list-container .job-content .item .text .lm-show{
+    display: block;
+  }
+  .about main .container .list-container .job-content .item .text .line.lm-mb{
+    margin-bottom: 8px;
+  }
 }

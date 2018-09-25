@@ -1,3 +1,18 @@
+<!-- 移动端头部 -->
+<header class="lm-header">
+    <div class="lm-header-container lm-container clear">
+        <a href="{{ url('/') }}" class="logo-container fl">
+            <img class="logo" src="{{ 'images/logo.png' }}" alt="logo"/>
+        </a>
+        <div class="fr">
+            <p><span class="pos-re">中文</span></p>
+            <!-- <i class="lm-icon"></i> -->
+            <img src="{{ 'images/icon-lm-nav.png' }}">
+        </div>
+    </div>
+</header>
+
+<!-- PC端头部 -->
 <header class="header">
     <div class="header-container container clear">
         <span data-locale="header_welcome_msg" class="welcome-msg fl pos-re animation-line">您好，欢迎进入科式滤膜网站</span>

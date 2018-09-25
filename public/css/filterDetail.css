@@ -1,6 +1,9 @@
 .filter-detail .container .detail-containter .detail-header {
   font-size: 0;
 }
+.filter-detail .container .detail-containter .detail-header .detail-swiper-container {
+  display: none;
+}
 .filter-detail .container .detail-containter .detail-header .detail-img {
   display: inline-block;
   width: 319px;
@@ -46,10 +49,10 @@
   background-color: #999;
   transform: rotate(-25deg);
 }
-.filter-detail .container .detail-containter .detail-header .pic-group .pic-control:hover:after,
+.filter-detail .container .detail-containter .detail-header .pic-group .pic-control:hover:after, 
 .filter-detail .container .detail-containter .detail-header .pic-group .pic-control:hover:before {
   background-color: #00A0E9;
-}
+} 
 .filter-detail .container .detail-containter .detail-header .pic-group .pic-next {
   transform: rotate(-180deg);
   position: relative;
@@ -208,4 +211,68 @@
 }
 .filter-detail .container .detail-containter .block-container .margin-bottom {
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .filter-detail .container .detail-containter .detail-header {
+    padding: 0 0.4rem;
+  }
+  .filter-detail .container .detail-containter .detail-header .detail-swiper-container {
+    display: block;
+    height: 300px;
+    border: 1px solid #ccc;
+  }
+  .filter-detail .container .detail-containter .detail-header .detail-img {
+    display: none;
+    width: 100%;
+    height: 300px;
+  }
+  .filter-detail .container .detail-containter .detail-header .detail-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .filter-detail .container .detail-containter .block-container .block-label {
+    padding: 0 0.4rem;
+  }
+  .filter-detail .container .detail-containter .detail-header .pic-group {
+    display: none;
+    margin-right: 0;
+    width: calc(100% - 6.1333rem - 10px);
+  }
+  .filter-detail .container .detail-containter .block-container .block-content {
+    font-size: 0.32rem;
+    padding: 0.8rem 0.4rem 0;
+  }
+  .filter-detail .container .detail-containter .block-container .block-content .table thead th,
+  .filter-detail .container .detail-containter .block-container .block-content .table tr td {
+    font-size: 0.32rem;
+  }
+  .filter-detail .container .detail-containter .detail-header .detail-desc {
+    width: 100%;
+  }
+  .filter-detail .container .detail-containter .detail-header .detail-desc .desc-title {
+    padding: 0.4rem 0;
+    margin: 0;
+  }
+  .filter-detail .container .detail-containter .block-container .block-content .operation-list li {
+    font-size: 0.32rem;
+    width: 100%;
+    margin: 0 0 0.4rem 0;
+  }
+  .filter-detail .container .detail-containter .block-container .block-content .operation-list li:nth-child(3n - 1) {
+    margin: 0 0 0.4rem 0;
+  }
+  .filter-detail .container .detail-containter .block-container .block-content .technical-support li .title span {
+    font-size: 0.32rem;
+  }
+  .filter-detail .container .detail-containter .block-container .block-content .technical-support li {
+    width: 100%;
+    margin: 0 0 0.4rem 0;
+  }
+  .filter-detail .container .detail-containter .block-container .block-content .operation-list li .label {
+    padding: 0.2em .6em .3em 0;
+  }
+  .filter-detail .container .detail-containter .block-container .block-content .technical-support li:nth-child(2) {
+    margin: 0 0 0.4rem 0;
+  }
 }

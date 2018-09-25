@@ -102,6 +102,6 @@
     <!-- 在线留言 -->
     @include('kslm.layouts.message')
     <!-- 底部 -->
-        @include('kslm.layouts.footer')
+    @include('kslm.layouts.footer')
     </article>
 @stop

@@ -1,3 +1,6 @@
+.support main {
+  background-color: #F9F9F9;
+}
 .support main .tab{
   border-bottom: 1px solid #aaa;
   text-align: center;
@@ -59,7 +62,7 @@
 .support main .container .list-container .list-content li:hover .item .text .title {
   color: #00A0E9;
 }
-.support main .container .list-container .list-content li .item .text .describe{
+.support main .container .list-container .list-content li .item .text .describe {
   line-height: 30px;
   height: 60px;
   overflow: hidden;
@@ -72,4 +75,90 @@
 }
 .support main .bottom a:hover {
   color: #00A0E9;
+}
+
+
+@media (max-width: 768px) {
+  .support .text-container .container {
+    background-color: #fff;
+  }
+  .support main .tab {
+    width: 100%;
+    font-size: 0;
+    padding: 0.4rem;
+    margin: 0;
+    border: none;
+  }
+  .support main .tab li.active:after, .support main .tab li.active:before,
+  .support main .tab li.active:after, .support main .tab li.active:after {
+    display: none;
+  }
+  .support main .tab li {
+    display: inline-block;
+    width: 30%;
+    margin: 0;
+    height: 42px;
+    line-height: 42px;
+    color: #999;
+    border: 1px solid #CCCCCC;
+  }
+  .support main .tab li.active {
+    border-color: #00A0E9;
+    color: #00A0E9;
+  }
+  .support main .tab li:nth-child(2) {
+    margin: 0 5%;
+  }
+
+  .list-container {
+    background-color: #fff;
+    padding: 0 0.4rem;
+  }
+  .support main .container .list-container .list-content li .item {
+    height: auto;
+    border-color: #E6E6E6;
+  }
+  .support main .container .list-container .list-content li .item .text .title {
+    margin-bottom: 0;
+    color: #333;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .support main .container .list-container .list-content li .item img {
+    width: 120px;
+    height: 90px;
+  }
+  .support main .container .list-container .list-content li .item .text {
+    width: calc(100% - 144px);
+    margin-left: 20px;
+  }
+  .support main .container .list-container .list-content li .item .text .describe {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.75;
+    display: -webkit-box;
+    height: auto;
+  }
+  .support main .container .list-container .list-content li .item .text .item-footer {
+    bottom: 0.7rem;
+    width: calc(100% - 144px);
+    font-size: 0.32rem;
+  }
+
+  /* 详情 */
+  main.text-container .container .title {
+    margin-top: 0;
+  }
+  main.text-container .container .content {
+    margin: 0 0.5333rem;
+    padding: 0 0 0.5333rem 0;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  main.text-container .container .bottom a {
+    display: block;
+    float: none;
+    margin-bottom: 0.5333rem;
+  }
 }

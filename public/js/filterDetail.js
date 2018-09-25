@@ -27,8 +27,10 @@ $(function () {
             var _sideItemIndex;
             _sideItemIndex = this.getUrlVal();
             if (typeof _sideItemIndex === 'string') {
-                $('.container .side-bar').find('li').removeClass('active');
-                $('.container .side-bar').find('li:nth-child(' + Number(_sideItemIndex) + ')').addClass('active');
+                if ($('.container .side-bar').find('li').attr('data-index') !== undefined) {
+                    $('.container .side-bar').find('li').removeClass('active');
+                    $('.container .side-bar').find('li:nth-child(' + Number(_sideItemIndex) + ')').addClass('active');
+                }
             }
         },
         getUrlVal: function () {
@@ -41,6 +43,13 @@ $(function () {
             return _res && _res[1];
         },
         swiper: function () {
+            var picSwiper = new Swiper('.detail-swiper-container', {
+                slidesPerView :'auto',
+                autoplayDisableOnInteraction: false,
+                mousewheelControl: true,
+                grabCursor: true
+            });
+
             var picSwiper = new Swiper('.pic-group-swiper', {
                 direction: 'vertical',
                 slidesPerView: 'auto',
@@ -81,8 +90,10 @@ $(function () {
         eventBind: function () {
 
             // 侧边栏
-            var _sideBarItem = $('.container .side-bar').find('li');
+            var _sideBarItem = $('.container .side-bar').find('li:not(.btn-group)');
             _sideBarItem.on('click', function () {
+                var _attr = $(this).attr('data-index');
+                if (_attr === undefined) return;
                 _sideBarItem.removeClass('active');
                 $(this).addClass('active');
                 major_category_id = $(this).attr('data-id');

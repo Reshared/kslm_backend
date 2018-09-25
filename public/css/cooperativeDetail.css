@@ -1,3 +1,20 @@
 .cooperative-detail main .bottom a:hover {
   color: #00A0E9;
 }
+
+@media (max-width: 768px) {
+  main.text-container .container .content img {
+    width: 100%;
+  }
+
+  main.text-container .container .content {
+    margin: 0 0.5333rem;
+    padding: 0 0 0.5333rem 0;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  main.text-container .container .bottom a {
+    display: block;
+    float: none;
+    margin-bottom: 0.5333rem;
+  }
+}

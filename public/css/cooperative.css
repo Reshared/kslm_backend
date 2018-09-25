@@ -37,11 +37,69 @@
 .cooperative main .container .list-content li:hover a {
   box-shadow: 0 1px 5px 2px rgba(204, 204, 204, 0.2);
 }
-.cooperative main .container .list-content li a.img-box img{
+.cooperative main .container .list-content li a.img-box img {
   width: 100%;
+  height: 100%;
 }
 .cooperative main .container .list-content li .text{
   width: 100%;
   text-align: center;
   margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .cooperative main .en-title {
+    font-size: 0;
+    line-height: 1;
+    width: 100%;
+  }
+  .cooperative main .cn-title {
+    padding-top: 0.4rem;
+    font-size: 0.62rem;
+  }
+  .cooperative main .en-title:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+  }
+  .cooperative main .en-title>* {
+    display: inline-block;
+  }
+  .cooperative main .en-title span {
+    font-size: 0.3733rem;
+    margin: 0 0.3733rem;
+  }
+  .cooperative main .en-title img {
+    width: calc((100% - (0.3733rem * 14)) / 2 - 0.3733rem);
+    vertical-align: baseline;
+  }
+  .cooperative main .container .list-content {
+    font-size: 0;
+    padding: 0 0.4rem;
+  }
+  .cooperative main .container .list-content li {
+    width: 50%;
+    margin: 0;
+    border: none;
+  }
+  .cooperative main .container .list-content li a.img-box {
+    padding: 5px;
+    margin: 0;
+    height: 3.7333rem;
+  }
+  .cooperative main .container .list-content li a.img-box img {
+    width: 100%;
+    height: 100%;
+  }
+  .cooperative main .container .list-content li:nth-child(2n) a.img-box {
+    margin-left: 10px;
+  }
+  .cooperative main .container .list-content li:nth-child(2n - 1) a.img-box {
+    margin-right: 10px;
+  }
+  .cooperative main .container .list-content li .text {
+    font-size: 0.48rem;
+  }
 }

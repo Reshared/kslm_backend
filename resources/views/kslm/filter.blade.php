@@ -78,13 +78,18 @@
                                 </a>
                             </li>
                         @endforeach
+                        <li class="btn-group">
+                            <button class="btn" type="button" data-toggle="modal" data-target="#preSelectModal">
+                                <span>精准选型</span> <span class="glyphicon glyphicon-menu-down"></span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
                 <!-- 列表 -->
                 <section class="list-container product-box clear">
                     <ul class="list-content clear"></ul>
                     <!-- 分页 -->
-                    <div aria-label="Page navigation" class="fr">
+                    <div aria-label="Page navigation" class="fr pagination-container">
                         <ul class="pagination"></ul>
                     </div>
                 </section>
