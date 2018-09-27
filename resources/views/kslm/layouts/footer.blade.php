@@ -16,6 +16,6 @@
                 <img src="{{ asset('images/weChat11.png') }}" alt="微信">
             </div>
         </div>
-        <div class="bottom text-center co-999 font-12">&copy;2014-2044科式滤膜公司官网 保留一切权利.京ICP备14024044号-1</div>
+        <div class="bottom text-center co-999 font-12">&copy;2014-2044科氏滤膜公司官网 保留一切权利.京ICP备14024044号-1</div>
     </div>
 </footer>
