@@ -49,7 +49,7 @@ class PartnerController extends Controller
             $form->number('sort', '排序值');
             $form->image('image', '封面图')->uniqueName()->rules('required');
             $form->radio('is_recommend', '推荐位')->options(['不推荐', '推荐'])->default(0);
-            $form->editor('content', '图文详情');
+            $form->ckeditor('content', '图文详情');
         });
     }
 

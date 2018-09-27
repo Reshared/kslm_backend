@@ -72,7 +72,7 @@ class PostController extends Controller
             $form->text('seo_description', 'description')->rules('max:255');
             $form->image('image', '图片上传')->uniqueName();
             $form->number('sort', '排序值');
-            $form->editor('content', '图文详情')->rules('required');
+            $form->ckeditor('content', '图文详情')->rules('required');
         });
     }
 
