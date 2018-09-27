@@ -60,10 +60,12 @@ class AjaxController extends Controller
             if ($categoryIds) {
                 $products = Product::orderBy('sort')
                     ->whereIn('category_id', $categoryIds)
+                    ->select('name', 'image', 'id', 'major_category_id')
                     ->with('majorCategory')
                     ->paginate();
             } else {
                 $products = Product::orderBy('sort')
+                    ->select('name', 'image', 'id', 'major_category_id')
                     ->with('majorCategory')
                     ->paginate();
             }
@@ -72,11 +74,13 @@ class AjaxController extends Controller
                 $products = Product::where('major_category_id', $majorCategoryId)
                     ->whereIn('category_id', $categoryIds)
                     ->orderBy('sort')
+                    ->select('name', 'image', 'id', 'major_category_id')
                     ->with('majorCategory')
                     ->paginate();
             } else {
                 $products = Product::where('major_category_id', $majorCategoryId)
                     ->orderBy('sort')
+                    ->select('name', 'image', 'id', 'major_category_id')
                     ->with('majorCategory')
                     ->paginate();
             }
