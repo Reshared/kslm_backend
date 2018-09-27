@@ -93,7 +93,7 @@
                 <section class="list-container clear job-container hide">
                     <h3 class="text-center about-title lm-title">人员招聘</h3>
                     <div class="job-content bg-white">
-                        <img src="./images/about-job.png" alt="">
+                        <img src="{{ asset('images/about-job.png') }}" alt="">
                         <div class="item">
                             <div class="title padding-l-20">
                                 <span class="co-main mar-r-10px">行政专员/助理</span>
