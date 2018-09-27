@@ -53,7 +53,7 @@ class ProductController extends Controller
             $form->select('major_category_id', '主分类')->options($majorCateArr)->rules('required');
             $form->select('category_id', '辅分类')->options($cateArr);
             $form->text('name', '产品名称')->rules('required|max:150');
-            $form->textarea('description', '产品描述')->rules('required|max:255');
+            $form->textarea('description', '产品描述')->rules('required|max:1000');
             $form->text('seo_title', 'title')->rules('max:255');
             $form->text('seo_keywords', 'keywords')->rules('max:255');
             $form->text('seo_description', 'description')->rules('max:255');
@@ -61,7 +61,7 @@ class ProductController extends Controller
             $form->multipleImage('image_group', '产品组图')->uniqueName()->removable();
             $form->number('sort', '序号值');
             $form->listbox('posts', '关联文章')->options($postArr)->help('左侧为待选资讯列表；右侧为已关联资讯列表');
-            $form->editor('content', '产品详情')->rules('required');
+            $form->ckeditor('content', '产品详情')->rules('required');
         });
     }
 

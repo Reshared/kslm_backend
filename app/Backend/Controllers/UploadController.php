@@ -60,4 +60,46 @@ class UploadController extends Controller
         }
         return $return;
     }
+
+    public function uploadCk(Request $request)
+    {
+        $file = $request->file("upload");
+        if (!$file->isValid()) {
+            return response()->json([
+                'uploaded' => 0,
+                'error' => [
+                    'message' => '图片不合法'
+                ]
+            ]);
+        }
+
+        if (!in_array(strtolower($file->extension()), ['jpeg', 'jpg', 'gif', 'gpeg', 'png'])) {
+            return response()->json([
+                'uploaded' => 0,
+                'error' => [
+                    'message' => '不支持的图片格式'
+                ]
+            ]);
+        }
+
+        $picname = $file->getClientOriginalName();
+        $ext = $file->getClientOriginalExtension();
+        $filename = time() . str_random(6) . "." . $ext;
+
+        if ($file->move("uploads/images", $filename)) {
+            $newFileName = '/' . "uploads/images" . '/' . $filename;
+            return response()->json([
+                'uploaded' => 1,
+                'fileName' => $picname,
+                'url' => url($newFileName),
+            ]);
+        }
+
+        return response()->json([
+            'uploaded' => 0,
+            'error' => [
+                'message' => '上传失败，请重试'
+            ]
+        ]);
+    }
 }

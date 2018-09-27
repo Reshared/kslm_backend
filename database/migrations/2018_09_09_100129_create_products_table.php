@@ -32,7 +32,7 @@ class CreateProductsTable extends Migration
                 ->onDelete('cascade');
 
             $table->string('name');
-            $table->string('description');
+            $table->text('description');
             $table->string('seo_title')->nullable();
             $table->string('seo_description')->nullable();
             $table->string('seo_keywords')->nullable();

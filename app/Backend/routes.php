@@ -14,6 +14,7 @@ Route::group([
         return redirect('/backend/banners');
     });
     $router->post('upload', 'UploadController@uploadImg');
+    $router->post('ck_upload', 'UploadController@uploadCk');
     $router->post('posts/stick', 'PostController@stick');
     $router->post('messages/deal', 'MessageController@deal');
     $router->post('categories/sort', 'CategoryController@sort');

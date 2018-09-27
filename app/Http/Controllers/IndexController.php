@@ -22,8 +22,7 @@ class IndexController extends Controller
     public function index()
     {
         $banners = Banner::orderBy('sort', 'desc')->orderBy('created_at', 'desc')->get();
-        $posts = Post::byType(0)
-            ->take(9)
+        $posts = Post::take(9)
             ->orderBy('is_stick', 'desc')
             ->orderBy('sort', 'asc')
             ->orderBy('created_at', 'desc')
