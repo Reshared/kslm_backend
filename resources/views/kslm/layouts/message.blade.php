@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
                 <h3 class="text-center co-main">在线留言</h3>
-                <p class="text-center co-999 line-height-2 font-16">非常感谢您对科式滤膜的关注！如果您有问题寻求答复<br>或者需要获取更多资料信息，请填写下表，我司专业人员会尽快给您答复，谢谢。
+                <p class="text-center co-999 line-height-2 font-16">非常感谢您对科氏滤膜的关注！如果您有问题寻求答复<br>或者需要获取更多资料信息，请填写下表，我司专业人员会尽快给您答复，谢谢。
                 </p>
                 <div class="form-container">
                     <form class="form-horizontal" id="olForm">

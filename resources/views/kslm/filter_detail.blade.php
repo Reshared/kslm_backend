@@ -41,7 +41,7 @@
                 <div class="crumb clear">
                     <ol class="breadcrumb fl">
                         <li><a href="{{ url('/') }}">首页</a></li>
-                        <li><a href="{{ url('filter') }}">科式滤膜</a></li>
+                        <li><a href="{{ url('filter') }}">科氏滤膜</a></li>
                         <li class="active">{{ $product['name'] }}</li>
                     </ol>
                 </div>

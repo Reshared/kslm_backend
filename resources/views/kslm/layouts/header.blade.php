@@ -15,7 +15,7 @@
 <!-- PC端头部 -->
 <header class="header">
     <div class="header-container container clear">
-        <span data-locale="header_welcome_msg" class="welcome-msg fl pos-re animation-line">您好，欢迎进入科式滤膜网站</span>
+        <span data-locale="header_welcome_msg" class="welcome-msg fl pos-re animation-line">您好，欢迎进入科氏滤膜网站</span>
 
         <ul class="clear fr">
             <li class="fl lang langZh hide"><span class="animation-line">中文</span></li>

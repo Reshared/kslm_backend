@@ -57,7 +57,7 @@
                 <div class="crumb clear">
                     <ol class="breadcrumb fl">
                         <li><a href="{{ url('/') }}">首页</a></li>
-                        <li class="active">科式滤膜</li>
+                        <li class="active">科氏滤膜</li>
                     </ol>
                     <div class="fr pos-re">
                         <button class="btn" type="button" data-toggle="modal" data-target="#preSelectModal">
