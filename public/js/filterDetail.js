@@ -17,6 +17,10 @@ $(function () {
         $('#preSelectModal').modal('hide');
     });
 
+    $('.im_product').click(function () {
+        window.location.href = '/filter/' + $(this).attr('data-id');
+    });
+
     FilterDetail.prototype = {
         init: function () {
             this.swiper();
