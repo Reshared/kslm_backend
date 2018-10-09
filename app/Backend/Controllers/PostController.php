@@ -79,7 +79,7 @@ class PostController extends Controller
             ]);
             $form->text('title', '名称')->rules('required|max:150');
             $form->textarea('description', '描述')->rules('max:255');
-            $form->text('seo_title', 'title')->rules('max:255');
+            $form->text('seo_title', 'title')->help('留空则保存为产品名称')->rules('max:255');
             $form->text('seo_keywords', 'keywords')->rules('max:255');
             $form->text('seo_description', 'description')->rules('max:255');
             $form->image('image', '图片上传')->uniqueName();
