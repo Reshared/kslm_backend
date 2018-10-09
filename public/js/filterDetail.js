@@ -17,10 +17,6 @@ $(function () {
         $('#preSelectModal').modal('hide');
     });
 
-    $('.im_product').click(function () {
-        window.location.href = '/filter/' + $(this).attr('data-id');
-    });
-
     FilterDetail.prototype = {
         init: function () {
             this.swiper();
@@ -138,7 +134,7 @@ function loadNextCategory(obj) {
                     for (var o in res.data) {
                         if (res.data[o].product) {
                             html += '<li class="im_product" data-id="' +
-                                res.data[o].id + '" onclick="justFocusThis(this)">' +
+                                res.data[o].id + '" onclick="justFocusThis2(this)">' +
                                 res.data[o].name + '</li>';
                         } else {
                             html += '<li data-id="' +
@@ -200,6 +196,10 @@ function justFocusThis(item) {
         $(item).parent('ul').find('.active').removeClass('active');
         $(item).addClass('active');
     }
+}
+
+function justFocusThis2(item) {
+    window.location.href = '/filter/' + $(item).attr('data-id');
 }
 
 function loadNextProduct(p) {
