@@ -27,7 +27,6 @@ CKEDITOR.editorConfig = function (config) {
 
     config.height = 500;
     config.extraPlugins = 'justify,colorbutton';
-    config.colorButton_colors = 'CF5D4E,454545,FFF,CCC,DDD,CCEAEE,66AB16';
     config.colorButton_enableAutomatic = false;
     // Remove some buttons provided by the standard plugins, which are
     // not needed in the Standard(s) toolbar.
