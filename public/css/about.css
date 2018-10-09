@@ -80,6 +80,7 @@
 .about main .container .list-container .job-content{
   padding: 30px;
   margin-bottom: 40px;
+  line-height: 25px;
 }
 .about main .container .list-container .job-content img{
   width: 100%;
