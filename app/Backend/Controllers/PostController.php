@@ -18,6 +18,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class PostController extends Controller
 {
@@ -29,6 +30,17 @@ class PostController extends Controller
             $content->header('资讯管理');
             $content->body($this->grid());
         });
+    }
+
+    public function update($id)
+    {
+        $data = Input::get();
+
+        if (!Input::get('seo_title')) {
+            $data['seo_title'] = $data['title'];
+        }
+
+        return $this->form()->update($id, $data);
     }
 
     public function grid()
