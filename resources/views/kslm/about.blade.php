@@ -93,6 +93,7 @@
                 <section class="list-container clear job-container hide">
                     <h3 class="text-center about-title lm-title">人员招聘</h3>
                     <div class="job-content bg-white">
+                        <img src="{{ asset('images/about-job.png') }}" alt="">
                         {!! $jobs->content !!}
                     </div>
                 </section>
