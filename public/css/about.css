@@ -183,6 +183,9 @@
     width: 100%;
   }
   /* 实景图 */
+  .about main .container .factory-container {
+    padding: 0 0.4rem;
+  }
   .about main .container .factory-container img{
     width: 100%;
   }

@@ -58,6 +58,15 @@
     width: 100%;
     padding: 0 0.4rem;
   }
+  body .precision-select .recommend-list-container .recommend-select {
+    display: block;
+    padding: 0.4rem 0.4rem 0;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid #ccc;
+  }
+  body .precision-select .recommend-list-container .recommend-select ul {
+    margin-bottom: 0;
+  }
   body .precision-select .recommend-list-container ul {
     display: block;
   }

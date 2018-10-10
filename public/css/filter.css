@@ -136,7 +136,9 @@ main .side-bar li i {
   background-color: #00A0E9;
   border-color: #00A0E9;
 }
-
+body .precision-select .recommend-list-container .recommend-select {
+  display: none;
+}
 @media (max-width: 768px) {
   .filter .crumb {
     display: none;
@@ -157,11 +159,13 @@ main .side-bar li i {
   }
   .filter main .side-bar ul li {
     float: left;
-    width: 30%;
+    /* width: 30%; */
+    padding: 0 0.4rem;
     height: 1.2rem;
     line-height: 1.2rem;
     font-size: 0.3733rem;
     text-align: center;
+    margin-right: 5%;
   }
   .filter main .side-bar ul li.btn-group {
     display: inline-block;
@@ -172,9 +176,6 @@ main .side-bar li i {
   }
   main .side-bar li i {
     display: none;
-  }
-  .filter main .side-bar ul li:nth-child(3n - 1) {
-    margin: 0 5% 0;
   }
   .filter main .side-bar .btn {
     border-radius: 0;
@@ -192,6 +193,23 @@ main .side-bar li i {
     outline: none;
     background: transparent;
     box-shadow: none;
+  }
+  .filter .btn-group-container {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: #00A0E9;
+    background-color: #F8FBFF;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 15px;
+  }
+  .filter .btn-group-container .glyphicon-menu-right {
+    color: #00A0E9;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -7px;
   }
 
   /* 列表 */

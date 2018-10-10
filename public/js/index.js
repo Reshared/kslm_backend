@@ -34,6 +34,13 @@ $(function () {
                     loop: true,
                     autoplay: 3000
                 })
+            } else {
+                var newsSwiper = new Swiper('.news-swiper-container-lm', {
+                    pagination: '.news-swiper-pagination',
+                    observer: true,
+                    loop: true,
+                    autoplay: 3000
+                })
             }
 
         },

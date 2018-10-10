@@ -83,7 +83,7 @@
         <!-- 最新动态 -->
         <section class="latest-news">
             <div class="news-container container">
-                <div class="news-label font-24 pos-re clear">
+                <div class="news-label font-24 pos-re clear text-center">
                     <span>最新动态</span>
                     <i class="slant-line"></i>
                     <span class="font-16 co-aaa text-en pos-re">LATEST NEWS</span>
