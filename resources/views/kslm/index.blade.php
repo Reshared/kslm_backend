@@ -131,6 +131,24 @@
                         </div>
                         <div class="news-swiper-pagination swiper-pagination"></div>
                     </div>
+                    <div class="news-swiper-container swiper-container news-swiper-container-lm">
+                        <div class="news-swiper-wrapper swiper-wrapper">
+                            @foreach($posts as $k=>$post)
+                                @if($k%3 == 0)
+                                    <ul class="swiper-slide news-list clear">
+                                        <li>
+                                            <a href="{{ url('support', ['id' => $post['id']]) }}">
+                                                <img src="{{ $post['image'] }}" alt="{{ $post['title'] }}">
+                                                <p class="new-item-tilte ellipsis">{{ $post['title'] }}</p>
+                                                <p class="new-item-content row-ellipsis">{{ $post['description'] }}</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                @endif
+                            @endforeach
+                        </div>
+                        <div class="news-swiper-pagination swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -141,6 +159,10 @@
                     <span>合作企业</span>
                     <i class="slant-line"></i>
                     <span class="font-16 co-aaa text-en pos-re">JOINT VENTURE</span>
+                    <a class="label-more fr pointer" href="{{ url('cooperative') }}">
+                        <span class="font-20 co-333 ">MORE</span>
+                        <b class="co-333 pos-re"></b>
+                    </a>
                 </div>
                 <div class="joint-content">
                     <ul class="join-list clear font-0">

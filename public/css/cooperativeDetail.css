@@ -8,6 +8,7 @@
   }
 
   main.text-container .container .content {
+    min-height: 6rem;
     margin: 0 0.5333rem;
     padding: 0 0 0.5333rem 0;
     border-bottom: 1px solid #E6E6E6;

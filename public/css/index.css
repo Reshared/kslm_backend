@@ -214,6 +214,16 @@
   left: 18px;
   top: 2px;
 }
+.joint-venture .joint-label .label-more b{
+  border: 1px solid #666;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-45deg);
+  top: -1px;
+}
 .joint-venture .container .joint-content {
   border-top:1px solid #ccc;
   border-bottom:1px solid #ccc;
@@ -221,6 +231,7 @@
 }
 .joint-venture .container .joint-content .join-list li{
   width: 20%;
+  height: 160px;
   padding: 0 10px;
   display: inline-block;
   box-sizing: border-box;
@@ -302,6 +313,9 @@
     /*margin-left: 1.9064rem;*/
     /*left: 0;*/
   }
+  .latest-news .news-container .news-label {
+    text-align: left;
+  }
   .news-container .news-label .label-more b {
     width: 0.2666rem;
     height: 0.2666rem;
@@ -332,6 +346,7 @@
   .joint-venture .container .joint-content .join-list li {
     width: 30%;
     padding: 0;
+    height: 2.0266rem;
   }
   .joint-venture .container .joint-content .join-list li:nth-child(3n - 1) {
     margin: 0 5%;

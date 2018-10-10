@@ -46,13 +46,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer" style="width: 99%;">
+                    <!-- <div class="modal-footer" style="width: 99%;">
                         <button type="button" class="btn btn-primary" id="confirm_filter">确认</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
 
+        <div class="btn-group-container" data-toggle="modal" data-target="#preSelectModal">
+            <span>精准选型</span> <span class="glyphicon glyphicon-menu-right"></span>
+        </div>
         <!-- 主要内容 -->
         <main class="bg-white">
             <div class="container">
@@ -81,11 +84,11 @@
                                 </a>
                             </li>
                         @endforeach
-                        <li class="btn-group">
+                        <!-- <li class="btn-group">
                             <button class="btn" type="button" data-toggle="modal" data-target="#preSelectModal">
                                 <span>精准选型</span> <span class="glyphicon glyphicon-menu-down"></span>
                             </button>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <!-- 列表 -->

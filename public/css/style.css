@@ -935,6 +935,7 @@ body .exploded-view .modal-body .close-icon:before {
   }
   body .container {
     width: 100%;
+    min-height: 6rem;
   }
   /* 顶部 */
   .header {
