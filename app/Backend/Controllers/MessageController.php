@@ -33,7 +33,7 @@ class MessageController extends Controller
     public function grid()
     {
         return Admin::grid(Message::class, function (Grid $grid) {
-            $grid->model()->orderBy('deal')->orderBy('created_at');
+            $grid->model()->orderBy('deal')->orderBy('created_at', 'desc');
             $grid->column('id', 'ID');
             $grid->column('created_at', '发布时间')->style('width: 150px');
             $grid->column('name', '提交人');
