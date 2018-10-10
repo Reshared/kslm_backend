@@ -134,7 +134,7 @@
                     <div class="news-swiper-container swiper-container news-swiper-container-lm">
                         <div class="news-swiper-wrapper swiper-wrapper">
                             @foreach($posts as $k=>$post)
-                                @if($k%3 == 0)
+                                @if($k == 0)
                                     <ul class="swiper-slide news-list clear">
                                         <li>
                                             <a href="{{ url('support', ['id' => $post['id']]) }}">
