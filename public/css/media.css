@@ -8,6 +8,7 @@
   }
   body .exploded-view .modal-body {
     padding: 0.8rem 0.4rem;
+    height: 6.6666rem;
   }
   body .exploded-view .modal-body .close-icon {
     /* width: 0.4rem;

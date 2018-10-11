@@ -38,21 +38,21 @@
         <main class="text-container">
             <!-- tab切换 -->
             <ul class="tab bg-white tab">
-                <a href="{{ url('support?type=0') }}">
-                    <li @if($post->type == '技术支持') class="active" @endif>
+                <li class="@if($post->type == '技术支持') active @endif animation-line pos-re">
+                    <a href="{{ url('support?type=0') }}">
                         技术支持
-                    </li>
-                </a>
-                <a href="{{ url('support?type=1') }}">
-                    <li @if($post->type == '服务与帮助') class="active" @endif>
+                    </a>
+                </li>
+                <li class="@if($post->type == '服务与帮助') active @endif animation-line pos-re">
+                    <a href="{{ url('support?type=1') }}">
                         服务与帮助
-                    </li>
-                </a>
-                <a href="{{ url('support?type=2') }}">
-                    <li @if($post->type == '行业动态') class="active" @endif>
+                    </a>
+                </li>
+                <li class="@if($post->type == '行业动态') active @endif animation-line pos-re">
+                    <a href="{{ url('support?type=2') }}">
                         行业动态
-                    </li>
-                </a>
+                    </a>
+                </li>
             </ul>
             <div class="container">
                 <div class="title">
