@@ -208,7 +208,8 @@
   padding: 30px 0 60px;
 }
 .joint-venture .container .slant-line {
-  margin-left: -22px;
+  margin-left: -12px;
+	left: inherit;
 }
 .joint-venture .container .text-en {
   left: 18px;
@@ -239,6 +240,7 @@
 }
 .joint-venture .container .joint-content .join-list li a {
   display: block;
+  height: 100%;
 }
 .joint-venture .container .joint-content .join-list li a img {
   width: 100%;
