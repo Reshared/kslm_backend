@@ -93,7 +93,7 @@
                     </a>
                 </div>
                 <div class="news-content">
-                    <div class="swiper-container">
+                    <div class="news-swiper-container swiper-container">
                         <div class="news-swiper-wrapper swiper-wrapper">
                             @foreach($posts as $k=>$post)
                                 @if($k%3 == 0)
@@ -131,7 +131,7 @@
                         </div>
                         <div class="news-swiper-pagination swiper-pagination"></div>
                     </div>
-                    <div class="news-swiper-container swiper-container news-swiper-container-lm">
+                    <div class="swiper-container news-swiper-container-lm">
                         <div class="news-swiper-wrapper swiper-wrapper">
                             @foreach($posts as $k=>$post)
                                 <ul class="swiper-slide news-list clear">
