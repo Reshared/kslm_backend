@@ -93,7 +93,7 @@
                     </a>
                 </div>
                 <div class="news-content">
-                    <div class="news-swiper-container swiper-container">
+                    <div class="swiper-container">
                         <div class="news-swiper-wrapper swiper-wrapper">
                             @foreach($posts as $k=>$post)
                                 @if($k%3 == 0)
@@ -134,17 +134,15 @@
                     <div class="news-swiper-container swiper-container news-swiper-container-lm">
                         <div class="news-swiper-wrapper swiper-wrapper">
                             @foreach($posts as $k=>$post)
-                                @if($k == 0)
-                                    <ul class="swiper-slide news-list clear">
-                                        <li>
-                                            <a href="{{ url('support', ['id' => $post['id']]) }}">
-                                                <img src="{{ $post['image'] }}" alt="{{ $post['title'] }}">
-                                                <p class="new-item-tilte ellipsis">{{ $post['title'] }}</p>
-                                                <p class="new-item-content row-ellipsis">{{ $post['description'] }}</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                @endif
+                                <ul class="swiper-slide news-list clear">
+                                    <li>
+                                        <a href="{{ url('support', ['id' => $post['id']]) }}">
+                                            <img src="{{ $post['image'] }}" alt="{{ $post['title'] }}">
+                                            <p class="new-item-tilte ellipsis">{{ $post['title'] }}</p>
+                                            <p class="new-item-content row-ellipsis">{{ $post['description'] }}</p>
+                                        </a>
+                                    </li>
+                                </ul>
                             @endforeach
                         </div>
                         <div class="news-swiper-pagination swiper-pagination"></div>
