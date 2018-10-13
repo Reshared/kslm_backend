@@ -871,6 +871,7 @@ body .exploded-view .modal-dialog {
 body .exploded-view .modal-body {
   padding: 54px;
   line-height: 1;
+  height: 610px;
 }
 body .exploded-view .modal-body img {
   width: 100%;
