@@ -30,6 +30,17 @@ class ProductController extends Controller
         });
     }
 
+    public function update($id)
+    {
+        $product = Product::findOrFail($id);
+        $count = count($product->files);
+        $count += count(Input::file('files'));
+        if ($count > 20) {
+            return back()->withInput()->withErrors(['files' => '附件不能超过20个']);
+        }
+        return $this->form()->update($id);
+    }
+
     public function grid()
     {
         return Admin::grid(Product::class, function (Grid $grid) {
