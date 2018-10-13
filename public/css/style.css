@@ -188,6 +188,9 @@ body .container {
   margin: 0 auto;
   padding: 0;
 }
+body main .container {
+  min-height: 600px;
+}
 /* 斜线 */
 .slant-line {
   display: inline-block;
@@ -218,7 +221,7 @@ body .container {
   cursor: pointer;
 }
 .header .header-container span {
-  position: relative; 
+  position: relative;
 }
 .header .header-container span:after,
 .header .header-container span:before {
@@ -684,7 +687,7 @@ body .modal button.close:active,
 body .modal button.close:hover,
 body .modal button.close span:focus,
 body .modal button.close span:hover,
-body .modal button.close span:active {
+body .modal button.close span:active, {
   outline: none;
   border: none;
   box-shadow: none;
@@ -770,7 +773,7 @@ body .modal-dialog .checkbox-list {
   margin-top: 9px;
   font-size: 0;
 }
-body .modal-dialog .checkbox-list li:nth-child(3n - 1) {
+body .modal-dialog .checkbox-list li:nth(3n - 1) {
   margin: 0 5%;
 }
 body .modal-dialog .checkbox-list li {
@@ -860,7 +863,6 @@ body .precision-select .recommend-list-container ul:not(:last-child) {
 /* 图片展示框 */
 body .exploded-view .modal-dialog {
   position: absolute;
-  height: 612px;
   left: 50%;
   top: 50%;
   margin-left: -400px;
@@ -872,6 +874,7 @@ body .exploded-view .modal-body {
 }
 body .exploded-view .modal-body img {
   width: 100%;
+  height: 100%;
   border: 1px solid #ccc;
 }
 body .exploded-view .modal-body .close-icon {
@@ -935,6 +938,8 @@ body .exploded-view .modal-body .close-icon:before {
   }
   body .container {
     width: 100%;
+  }
+  body main .container {
     min-height: 6rem;
   }
   /* 顶部 */

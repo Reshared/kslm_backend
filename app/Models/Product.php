@@ -41,6 +41,31 @@ class Product extends Model
         }
     }
 
+    public function getFilesAttribute($files)
+    {
+        if (!$files) {
+            return [];
+        }
+
+        $urls = explode(',', $files);
+        foreach ($urls as &$url) {
+            if (substr($url, 0, 4) != 'http') {
+                $url = url($url);
+            }
+        }
+
+        return $urls;
+    }
+
+    public function setFilesAttribute($files)
+    {
+        if (is_array($files)) {
+            $this->attributes['files'] = implode(',', $files);
+        } else {
+            $this->attributes['files'] = $files;
+        }
+    }
+
     public function majorCategory()
     {
         return $this->belongsTo(MajorCategory::class);

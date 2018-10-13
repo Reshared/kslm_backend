@@ -97,7 +97,22 @@
 
                 {!! $product['content'] !!}
 
-                <!-- 相关技术支持 -->
+                <!-- 相关资料下载 -->
+                    <div class="block-container margin-bottom">
+                        <div class="block-label">相关资料下载</div>
+                        <div class="block-content">
+                            <ul class="download-list">
+                                @if($product['files'])
+                                    @foreach($product['files'] as $url)
+                                        <li class="clear"><a target="_blank" class="ellipsis" href="{{ $url }}">{{ url2Name($url) }}</a><a target="_blank" href="{{ $url }}"><img
+                                                        src="{{ asset('images/download.png') }}" alt="点击下载"></a></li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 相关技术支持 -->
                     <div class="block-container margin-bottom">
                         <div class="block-label">相关技术支持</div>
                         <div class="block-content">

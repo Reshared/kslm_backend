@@ -15,6 +15,10 @@ Route::group([
     });
     $router->post('upload', 'UploadController@uploadImg');
     $router->post('ck_upload', 'UploadController@uploadCk');
+    $router->post('products/{id}/edit/upload', 'UploadController@uploadMul');
+    $router->post('products/{id}/edit/un_upload', 'UploadController@unUploadMul');
+    $router->post('products/{id}/edit/upload_file', 'UploadController@uploadFiles');
+    $router->post('products/{id}/edit/un_upload_file', 'UploadController@unUploadFiles');
     $router->post('posts/stick', 'PostController@stick');
     $router->post('messages/deal', 'MessageController@deal');
     $router->post('categories/sort', 'CategoryController@sort');

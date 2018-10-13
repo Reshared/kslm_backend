@@ -7,8 +7,8 @@
 }
 .support main .tab a {
   display: inline-block;
-  height: 75px;
-  line-height: 75px;
+  height: 42px;
+  line-height: 42px;
   color: #333;
 }
 .support main .tab li{
@@ -99,6 +99,11 @@
   .support main .tab li.active:after, .support main .tab li.active:before,
   .support main .tab li.active:after, .support main .tab li.active:after {
     display: none;
+  }
+  .support main .tab li a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
   }
   .support main .tab li {
     display: inline-block;

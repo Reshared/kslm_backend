@@ -16,6 +16,7 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
+use Illuminate\Support\Facades\Input;
 
 class ProductController extends Controller
 {
@@ -58,10 +59,36 @@ class ProductController extends Controller
             $form->text('seo_keywords', 'keywords')->rules('max:255');
             $form->text('seo_description', 'description')->rules('max:255');
             $form->image('image', '封面图')->uniqueName()->rules('required');
-            $form->multipleImage('image_group', '产品组图')->uniqueName()->removable();
+            $form->multipleImage('image_group','产品组图')->uniqueName()->removable();
+//            $form->multipleImage('image_group', '产品组图')->options([
+//                'uploadUrl' => Input::url() . '/upload',
+//                'deleteUrl' => Input::url() . '/un_upload',
+//                'uploadExtraData' => [
+//                    '_token' => csrf_token()
+//                ],
+//                'deleteExtraData' => [
+//                    '_token' => csrf_token()
+//                ],
+//                'uploadAsync' => true,
+//                'showUpload' => true,
+//            ])->uniqueName()->removable();
             $form->number('sort', '序号值');
             $form->listbox('posts', '关联文章')->options($postArr)->help('左侧为待选资讯列表；右侧为已关联资讯列表');
             $form->ckeditor('content', '产品详情')->rules('required');
+            $form->multipleImage('files','附件')->removable();
+//            $form->multipleFile('files', '附件上传')->options([
+//                'uploadUrl' => Input::url() . '/upload_file',
+//                'deleteUrl' => Input::url() . '/un_upload_file',
+//                'uploadExtraData' => [
+//                    '_token' => csrf_token()
+//                ],
+//                'deleteExtraData' => [
+//                    '_token' => csrf_token()
+//                ],
+//                'uploadAsync' => true,
+//                'showUpload' => true,
+//                'maxFileCount' => 20
+//            ])->removable();
         });
     }
 

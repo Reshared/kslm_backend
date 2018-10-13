@@ -69,6 +69,13 @@
   cursor: pointer;
   margin-right: 5%;
 }
+.about main .container .list-container .honor-list li img{
+  width: 100%;
+  height: 100%;
+}
+.about main .container .factory-container {
+  margin-bottom: 30px;
+}
 .about main .container .list-container .honor-list li:nth-child(3n){
   margin-right: 0;
 }
@@ -83,6 +90,9 @@
   line-height: 25px;
 }
 .about main .container .list-container .job-content img{
+  width: 100%;
+}
+.about main .container img {
   width: 100%;
 }
 .about main .container .list-container .job-content .item{
@@ -181,10 +191,12 @@
   }
   .about main .container .list-container .honor-list li img{
     width: 100%;
+    height: 100%;
   }
   /* 实景图 */
   .about main .container .factory-container {
     padding: 0 0.4rem;
+    margin-bottom: 30px;
   }
   .about main .container .factory-container img{
     width: 100%;

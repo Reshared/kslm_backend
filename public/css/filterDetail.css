@@ -50,10 +50,10 @@
   background-color: #999;
   transform: rotate(-25deg);
 }
-.filter-detail .container .detail-containter .detail-header .pic-group .pic-control:hover:after, 
+.filter-detail .container .detail-containter .detail-header .pic-group .pic-control:hover:after,
 .filter-detail .container .detail-containter .detail-header .pic-group .pic-control:hover:before {
   background-color: #00A0E9;
-} 
+}
 .filter-detail .container .detail-containter .detail-header .pic-group .pic-next {
   transform: rotate(-180deg);
   position: relative;
@@ -217,6 +217,26 @@
   margin-top: 10px;
   line-height: 2;
   color: #333;
+}
+.filter-detail .container .detail-containter .block-container .block-content .download-list li {
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 20%;
+  margin-right: 4%;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+.filter-detail .container .detail-containter .block-container .block-content .download-list li a {
+  vertical-align: top;
+  float: left;
+  line-height: 30px;
+  color: #333;
+}
+.filter-detail .container .detail-containter .block-container .block-content .download-list li a:first-child {
+  width: calc(100% - 30px);
+}
+.filter-detail .container .detail-containter .block-container .block-content .download-list li a:last-child {
+  float: right;
 }
 .filter-detail .container .detail-containter .block-container .margin-bottom {
   margin-bottom: 20px;

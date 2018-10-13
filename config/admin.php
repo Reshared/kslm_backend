@@ -71,8 +71,8 @@ return [
         'disk' => 'local',
 
         'directory' => [
-            'image' => 'statics/images',
-            'file'  => 'statics/files',
+            'image' => 'uploads/images',
+            'file'  => 'uploads/files',
         ],
     ],
 

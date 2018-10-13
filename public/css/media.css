@@ -8,6 +8,7 @@
   }
   body .exploded-view .modal-body {
     padding: 0.8rem 0.4rem;
+    height: 6.6666rem;
   }
   body .exploded-view .modal-body .close-icon {
     /* width: 0.4rem;
@@ -28,7 +29,7 @@
   body .precision-select .modal-dialog .modal-header {
     position: relative;
     background-color: #fff;
-    
+
   }
   body .precision-select .modal-dialog .modal-header .close {
     position: absolute;
