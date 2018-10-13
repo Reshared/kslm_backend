@@ -25,7 +25,6 @@ function fileExt($path) {
         case 'mp4':
         case '3gp': return 'video'; break;
         case 'mp3': return 'autio'; break;
-        case 'pdf': return 'pdf'; break;
         default: return 'other'; break;
     }
 }
