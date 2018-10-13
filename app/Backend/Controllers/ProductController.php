@@ -32,12 +32,15 @@ class ProductController extends Controller
 
     public function update($id)
     {
-        $product = Product::findOrFail($id);
-        $count = count($product->files);
-        $count += count(Input::file('files'));
-        if ($count > 20) {
-            return back()->withInput()->withErrors(['files' => '附件不能超过20个']);
+        if (Input::hasFile('files')) {
+            $product = Product::findOrFail($id);
+            $count = count($product->files);
+            $count += count(Input::file('files'));
+            if ($count > 20) {
+                return back()->withInput()->withErrors(['files' => '附件不能超过20个']);
+            }
         }
+
         return $this->form()->update($id);
     }
 
@@ -86,9 +89,7 @@ class ProductController extends Controller
             $form->number('sort', '序号值');
             $form->listbox('posts', '关联文章')->options($postArr)->help('左侧为待选资讯列表；右侧为已关联资讯列表');
             $form->ckeditor('content', '产品详情')->rules('required');
-            $form->multipleFile('files','附件')->options([
-                'maxFileCount' => 20
-            ])->removable();
+            $form->multipleFile('files','附件')->removable();
 //            $form->multipleFile('files', '附件上传')->options([
 //                'uploadUrl' => Input::url() . '/upload_file',
 //                'deleteUrl' => Input::url() . '/un_upload_file',
