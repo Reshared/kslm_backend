@@ -3,12 +3,16 @@
     width: 100%;
     height: auto;
     left: 0;
-    top: 25%;
+    top: 50%;
     margin: 0;
-  }
+    transform: translate(0, -50%) !important;
+    -webkit-transform: translate(0, -50%) !important;
+    -moz-transform: translate(0, -50%) !important;
+    -ms-transform: translate(0, -50%) !important;
+    -o-transform: translate(0, -50%) !important;
+}
   body .exploded-view .modal-body {
     padding: 0.8rem 0.4rem;
-    height: 6.6666rem;
   }
   body .exploded-view .modal-body .close-icon {
     /* width: 0.4rem;
