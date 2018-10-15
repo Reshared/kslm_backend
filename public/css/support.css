@@ -76,6 +76,9 @@
   height: 60px;
   overflow: hidden;
   font-size: 14px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
 }
 .support main .container .list-container .list-content li .item .text .item-footer{
   position: absolute;
@@ -155,9 +158,10 @@
   .support main .container .list-container .list-content li .item .text .describe {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    line-height: 1.75;
+    line-height: 0.48rem;
+    height: 0.96rem;
     display: -webkit-box;
-    height: auto;
+    overflow: hidden;
   }
   .support main .container .list-container .list-content li .item .text .item-footer {
     bottom: 0.7rem;
