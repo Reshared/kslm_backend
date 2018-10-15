@@ -10,6 +10,7 @@ namespace App\Backend\Controllers;
 
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class UploadController extends Controller
@@ -101,5 +102,75 @@ class UploadController extends Controller
                 'message' => '上传失败，请重试'
             ]
         ]);
+    }
+
+    public function uploadMul(Request $request, $id)
+    {
+        $files = $request->file("image_group");
+        if (empty($files)) {
+            return response()->json(['reason' => '请上传文件'])->setStatusCode(413);
+        }
+
+        $uploads = [];
+        foreach ($files as $file) {
+            if (!$file->isValid()) {
+                return response()->json(['reason' => '文件不合法'])->setStatusCode(413);
+            }
+
+            $name = $file->getClientOriginalName();
+            $file->move('uploads/images/', $name);
+            $uploads[] = 'uploads/images/'. $name;
+        }
+
+        $product = Product::findOrFail($id);
+        $product->image_group =  implode(',', array_merge($product->image_group, $uploads));
+        $product->save();
+
+        return response()->json(['success' => true]);
+    }
+
+    public function unUploadMul(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+        $images = $product->image_group;
+        unset($images[$request->get('key')]);
+        $product->image_group = implode(',', $images);
+        $product->save();
+        return response()->json(['success' => true]);
+    }
+
+    public function uploadFiles(Request $request, $id)
+    {
+        $files = $request->file("files");
+        if (empty($files)) {
+            return response()->json(['reason' => '请上传文件'])->setStatusCode(413);
+        }
+
+        $uploads = [];
+        foreach ($files as $file) {
+            if (!$file->isValid()) {
+                return response()->json(['reason' => '文件不合法'])->setStatusCode(413);
+            }
+
+            $name = $file->getClientOriginalName();
+            $file->move('uploads/files/', $name);
+            $uploads[] = 'uploads/files/'. $name;
+        }
+
+        $product = Product::findOrFail($id);
+        $product->files =  implode(',', array_merge($product->files, $uploads));
+        $product->save();
+
+        return response()->json(['success' => true]);
+    }
+
+    public function unUploadFiles(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+        $images = $product->files;
+        unset($images[$request->get('key')]);
+        $product->files = implode(',', $images);
+        $product->save();
+        return response()->json(['success' => true]);
     }
 }

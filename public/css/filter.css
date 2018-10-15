@@ -226,6 +226,11 @@ body .precision-select .recommend-list-container .recommend-select {
     width: 100%;
   }
   .filter main .list-container > p {
+      padding: 0 20px;
+      overflow: hidden;
+      width: 100%;
+    }
+  .filter main .list-container > p {
     padding: 0 20px;
     overflow: hidden;
     width: 100%;
