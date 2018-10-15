@@ -73,6 +73,8 @@
   }
   .cooperative main .en-title img {
     width: calc((100% - (0.3733rem * 14)) / 2 - 0.3733rem);
+    width: -webkit-calc((100% - (0.3733rem * 14)) / 2 - 0.3733rem);
+    width: -moz-calc((100% - (0.3733rem * 14)) / 2 - 0.3733rem);
     vertical-align: baseline;
   }
   .cooperative main .container .list-content {

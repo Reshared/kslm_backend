@@ -77,6 +77,13 @@ main .side-bar li i {
   border-style: solid;
   border-color: #999;
   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+.filter .btn-group-container {
+  display: none;
 }
 
 /* 列表 */
@@ -85,6 +92,8 @@ main .side-bar li i {
   display: inline-block;
   font-size: 14px;
   width: calc(100% - 222px);
+  width: -webkit-calc(100% - 222px);
+  width: -moz-calc(100% - 222px);
 }
 .filter main .list-container .list-content li {
   float: left;

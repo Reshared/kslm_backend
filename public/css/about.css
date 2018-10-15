@@ -51,6 +51,9 @@
 .about main .container .list-container .bottom-list li.mar-5{
   margin-right: 5%;
 }
+.about main .container .list-container .bottom-list li img {
+  width: initial;
+}
 .about main .container .list-container .bottom-list li .text{
   margin-top: 20px;
   font-size: 16px;
@@ -64,7 +67,6 @@
 .about main .container .list-container .honor-list li{
   display: inline-block;
   width: 30%;
-  height: 240px;
   border: 1px solid #E6E6E6;
   margin-bottom: 20px;
   cursor: pointer;
@@ -72,7 +74,9 @@
 }
 .about main .container .list-container .honor-list li img{
   width: 100%;
-  height: 100%;
+}
+.about main .container .factory-container {
+  margin-bottom: 30px;
 }
 .about main .container .list-container .honor-list li:nth-child(3n){
   margin-right: 0;
@@ -88,6 +92,10 @@
   line-height: 25px;
 }
 .about main .container .list-container .job-content img{
+  width: 100% !important;
+  height: initial !important;
+}
+.about main .container img {
   width: 100%;
 }
 .about main .container .list-container .job-content .item{
@@ -167,7 +175,7 @@
   .about main .container .list-container .bottom-list li .text{
     font-size: 0.3733rem;
   }
-  .about main .container .list-container .bottom-list li img{
+  .about main .container .list-container .bottom-list li img {
     width: 100%;
   }
   /* 荣誉资质 */
@@ -177,7 +185,6 @@
   }
   .about main .container .list-container .honor-list li{
     width: 49%;
-    height: 3.3066rem;
   }
   .about main .container .list-container .honor-list li:nth-child(odd){
     margin-right: 2%;
@@ -187,11 +194,11 @@
   }
   .about main .container .list-container .honor-list li img{
     width: 100%;
-    height: 100%;
   }
   /* 实景图 */
   .about main .container .factory-container {
     padding: 0 0.4rem;
+    margin-bottom: 30px;
   }
   .about main .container .factory-container img{
     width: 100%;

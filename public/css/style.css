@@ -188,6 +188,9 @@ body .container {
   margin: 0 auto;
   padding: 0;
 }
+body main .container {
+  min-height: 600px;
+}
 /* 斜线 */
 .slant-line {
   display: inline-block;
@@ -200,6 +203,10 @@ body .container {
   left: 50%;
   margin-top: -5px;
   margin-left: -25px;
+  -webkit-transform: rotate(-65deg);
+  -moz-transform: rotate(-65deg);
+  -ms-transform: rotate(-65deg);
+  -o-transform: rotate(-65deg);
 }
 
 
@@ -218,7 +225,7 @@ body .container {
   cursor: pointer;
 }
 .header .header-container span {
-  position: relative; 
+  position: relative;
 }
 .header .header-container span:after,
 .header .header-container span:before {
@@ -473,6 +480,10 @@ body .breadcrumb>li+li:before {
   position: relative;
   top: -2px;
   margin-right: 3px;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
 }
 body .breadcrumb>li+li:after {
   content: '';
@@ -484,6 +495,10 @@ body .breadcrumb>li+li:after {
   position: absolute;
   left: 0;
   top: 8px;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
 }
 
 
@@ -584,6 +599,10 @@ article main .tab li {
   z-index: -1;
   border-right: none;
   transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
 }
 .float-window li:nth-child(2):hover .phone-num{
   background: #fff;
@@ -606,6 +625,10 @@ article main .tab li {
   opacity: 0;
   z-index: 2;
   transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
 }
 .float-window li:nth-child(3){
   background-color: #00a0e9;
@@ -625,9 +648,13 @@ body .animation-line:before {
   background-color: #00A0E9;
   transition-property: left, right;
   transition-timing-function: ease-out;
-  transition: all .3s;
+  transition: all .3s linear;
   position: absolute;
   bottom: 0;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
 }
 body .animation-line:after {
   left: 50%;
@@ -684,7 +711,7 @@ body .modal button.close:active,
 body .modal button.close:hover,
 body .modal button.close span:focus,
 body .modal button.close span:hover,
-body .modal button.close span:active {
+body .modal button.close span:active, {
   outline: none;
   border: none;
   box-shadow: none;
@@ -770,7 +797,7 @@ body .modal-dialog .checkbox-list {
   margin-top: 9px;
   font-size: 0;
 }
-body .modal-dialog .checkbox-list li:nth-child(3n - 1) {
+body .modal-dialog .checkbox-list li:nth(3n - 1) {
   margin: 0 5%;
 }
 body .modal-dialog .checkbox-list li {
@@ -845,6 +872,10 @@ body .precision-select .recommend-list-container ul li:after {
   margin-left: -4px;
   transform: rotate(-45deg);
   background-color: #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 body .precision-select .recommend-list-container ul li.active,
 body .precision-select .recommend-list-container ul li.active:after,
@@ -860,7 +891,6 @@ body .precision-select .recommend-list-container ul:not(:last-child) {
 /* 图片展示框 */
 body .exploded-view .modal-dialog {
   position: absolute;
-  height: 612px;
   left: 50%;
   top: 50%;
   margin-left: -400px;
@@ -869,7 +899,6 @@ body .exploded-view .modal-dialog {
 body .exploded-view .modal-body {
   padding: 54px;
   line-height: 1;
-  height: 610px;
 }
 body .exploded-view .modal-body img {
   width: 100%;
@@ -902,9 +931,17 @@ body .exploded-view .modal-body .close-icon:before {
 }
 body .exploded-view .modal-body .close-icon:after {
   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 body .exploded-view .modal-body .close-icon:before {
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }
 
 /* 媒体查询 */
@@ -937,7 +974,9 @@ body .exploded-view .modal-body .close-icon:before {
   }
   body .container {
     width: 100%;
-    min-height: 6rem;
+  }
+  body main .container {
+    min-height: 7rem;
   }
   /* 顶部 */
   .header {

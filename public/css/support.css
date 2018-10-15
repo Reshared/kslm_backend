@@ -59,6 +59,8 @@
 .support main .container .list-container .list-content li .item .text{
   display: inline-block;
   width: calc(100% - 244px);
+  width: -moz-calc(100% - 244px);
+  width: -webkit-calc(100% - 244px);
   margin-left: 40px;
   box-sizing: border-box;
 }
@@ -79,6 +81,8 @@
   position: absolute;
   bottom: 40px;
   width: calc(100% - 250px);
+  width: -webkit-calc(100% - 250px);
+  width: -moz-calc(100% - 250px);
 }
 .support main .bottom a:hover {
   color: #00A0E9;
@@ -99,6 +103,11 @@
   .support main .tab li.active:after, .support main .tab li.active:before,
   .support main .tab li.active:after, .support main .tab li.active:after {
     display: none;
+  }
+  .support main .tab li a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
   }
   .support main .tab li {
     display: inline-block;
@@ -138,6 +147,8 @@
     height: 90px;
   }
   .support main .container .list-container .list-content li .item .text {
+    width: -moz-calc(100% - 144px);
+    width: -webkit-calc(100% - 144px);
     width: calc(100% - 144px);
     margin-left: 20px;
   }
@@ -151,6 +162,8 @@
   .support main .container .list-container .list-content li .item .text .item-footer {
     bottom: 0.7rem;
     width: calc(100% - 144px);
+    width: -webkit-calc(100% - 144px);
+    width: -moz-calc(100% - 144px);
     font-size: 0.32rem;
   }
 
