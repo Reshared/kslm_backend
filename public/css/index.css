@@ -13,6 +13,9 @@
   position: relative;
   left: 22px;
   top: 2px;
+  display: inline-block;
+  width: 180px;
+  text-align: left;
 }
 .excellent-service .service-content .service-list {
   margin-top: 20px;
@@ -121,6 +124,12 @@
 .news-container .news-label .text-en {
   left: 22px;
   top: 2px;
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+}
+.news-container .news-label .label-more {
+  right: 15px;
 }
 .news-container .news-label .label-more b{
   border: 1px solid #666;
@@ -246,6 +255,12 @@
 .joint-venture .container .text-en {
   left: 18px;
   top: 2px;
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+}
+.joint-venture .joint-label .label-more {
+  right: 15px;
 }
 .joint-venture .joint-label .label-more b{
   border: 1px solid #666;
@@ -290,12 +305,13 @@
   }
   .excellent-service .section-label {
     text-align: left;
-    font-size: 0.4266rem;
+    /* font-size: 0.4266rem; */
   }
   .excellent-service .section-label span.text-en {
     font-size: 0.32rem;
+    display: inline;
   }
-  .home .slant-line {
+  .home .home-block div .slant-line {
     width: 0.8rem;
     margin-left: -5px;
     margin-top: -2px;
@@ -351,6 +367,7 @@
   }
   .latest-news .news-container .news-label .text-en {
     font-size: 0.32rem;
+    display: inline;
   }
   .latest-news .news-container .news-label .slant-line {
     margin-top: -5px;
@@ -384,7 +401,6 @@
   }
   .joint-venture .joint-container .joint-label .slant-line {
     margin-left: 1.9064rem;
-    margin-top: -5px;
     left: 0;
   }
   .joint-venture .container .joint-content .join-list li {

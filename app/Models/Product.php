@@ -8,12 +8,30 @@ class Product extends Model
 {
     protected $guarded = ['id'];
 
+    protected $perPage = 16;
+
     public function getImageAttribute($url)
     {
         if (substr($url, 0, 4) != 'http') {
             return url($url);
         }
         return $url;
+    }
+
+    public function getFilesAttribute($files)
+    {
+        if (!$files) {
+            return [];
+        }
+
+        $urls = explode(',', $files);
+        foreach ($urls as &$url) {
+            if (substr($url, 0, 4) != 'http') {
+                $url = url($url);
+            }
+        }
+
+        return $urls;
     }
 
     public function getImageGroupAttribute($urls)
@@ -34,36 +52,24 @@ class Product extends Model
 
     public function setImageGroupAttribute($urls)
     {
-        if (is_array($urls)) {
-            $this->attributes['image_group'] = implode(',', $urls);
-        } else {
-            $this->attributes['image_group'] = $urls;
-        }
+        $imagesPaths = str_replace(['"",', ',,'], ['', ','], $urls);
+        $this->attributes['image_group'] = trim($imagesPaths, ',');
     }
 
-    public function getFilesAttribute($files)
+    public function setFilesAttribute($urls)
     {
-        if (!$files) {
-            return [];
-        }
-
-        $urls = explode(',', $files);
-        foreach ($urls as &$url) {
-            if (substr($url, 0, 4) != 'http') {
-                $url = url($url);
-            }
-        }
-
-        return $urls;
+        $imagesPaths = str_replace(['"",', ',,'], ['', ','], $urls);
+        $this->attributes['files'] = trim($imagesPaths, ',');
     }
 
-    public function setFilesAttribute($files)
+    public function getImagesPathsAttribute()
     {
-        if (is_array($files)) {
-            $this->attributes['files'] = implode(',', $files);
-        } else {
-            $this->attributes['files'] = $files;
-        }
+        return $this->attributes['image_group'];
+    }
+
+    public function getFilesPathsAttribute()
+    {
+        return $this->attributes['files'];
     }
 
     public function majorCategory()

@@ -22,7 +22,7 @@
     <!-- 轮播图 -->
     @include('kslm.layouts.carousel')
     <!-- 优秀服务 -->
-        <section class="excellent-service bg-white">
+        <section class="excellent-service bg-white home-block">
             <div class="service-container container">
                 <div class="section-label text-center font-24 pos-re">
                     <span>优秀服务</span>
@@ -81,13 +81,13 @@
         </section>
 
         <!-- 最新动态 -->
-        <section class="latest-news">
+        <section class="latest-news home-block">
             <div class="news-container container">
-                <div class="news-label font-24 pos-re clear text-center">
+                <div class="news-label font-24 pos-re text-center">
                     <span>最新动态</span>
                     <i class="slant-line"></i>
                     <span class="font-16 co-aaa text-en pos-re">LATEST NEWS</span>
-                    <a class="label-more fr pointer" href="{{ url('support') }}">
+                    <a class="label-more pos-ab pointer" href="{{ url('support') }}">
                         <span class="font-20 co-333 ">MORE</span>
                         <b class="co-333 pos-re"></b>
                     </a>
@@ -151,13 +151,13 @@
             </div>
         </section>
         <!-- 合作企业 -->
-        <section class="joint-venture bg-white">
+        <section class="joint-venture bg-white home-block">
             <div class="joint-container container">
                 <div class="joint-label text-center font-24 pos-re">
                     <span>合作企业</span>
                     <i class="slant-line"></i>
                     <span class="font-16 co-aaa text-en pos-re">JOINT VENTURE</span>
-                    <a class="label-more fr pointer" href="{{ url('cooperative') }}">
+                    <a class="label-more pos-ab pointer" href="{{ url('cooperative') }}">
                         <span class="font-20 co-333 ">MORE</span>
                         <b class="co-333 pos-re"></b>
                     </a>

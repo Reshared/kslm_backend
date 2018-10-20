@@ -37,6 +37,24 @@
   width: 202px;
   margin-right: 20px;
 }
+.filter main .side-bar li.side-group {
+  display: block;
+}
+.filter main .side-bar li.side-group button {
+  display: block;
+  width: 100%;
+  height: 62px;
+  line-height: 62px;
+  font-size: 16px;
+  padding: 0 20px;
+  text-align: left;
+  color: #fff;
+  border: none;
+  background-color: #4cbcf0;
+}
+.filter main .side-bar li.side-group button i {
+  border-color: #fff;
+}
 .filter main .side-bar li.btn-group {
   display: none;
 }
@@ -176,9 +194,8 @@ body .precision-select .recommend-list-container .recommend-select {
     text-align: center;
     margin-right: 5%;
   }
-  .filter main .side-bar ul li.btn-group {
-    display: inline-block;
-    border-color: #00A0E9;
+  .filter main .side-bar ul li.side-group {
+    display: none;
   }
   main .side-bar li a {
     padding: 0;

@@ -30,6 +30,7 @@ $(function () {
             if (_windowW > 768) {
                 var newsSwiper = new Swiper('.news-swiper-container', {
                     pagination: '.news-swiper-pagination',
+                    paginationClickable: true,
                     observer: true,
                     loop: true,
                     autoplay: 3000
@@ -37,6 +38,7 @@ $(function () {
             } else {
                 var newsSwiper = new Swiper('.news-swiper-container-lm', {
                     pagination: '.news-swiper-pagination',
+                    paginationClickable :true,
                     observer: true,
                     loop: true,
                     autoplay: 3000

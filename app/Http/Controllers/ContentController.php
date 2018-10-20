@@ -47,12 +47,23 @@ class ContentController extends Controller
         $post->increment('clicks');
 
         $type = 0;
-        if($post->type == '服务与帮助') $type = 1;
+        if ($post->type == '服务与帮助') $type = 1;
         elseif ($post->type == '行业动态') $type = 2;
 
-        $next = Post::byType($type)->where('id', '>', $id)->orderBy('id')->first();
+        $posts = Post::byType($type)->select('id')->orderBy('is_stick', 'desc')->orderBy('sort')->orderBy('created_at', 'desc')->get()->pluck('id')->toArray();
 
-        $pre = Post::byType($type)->where('id', '<', $id)->orderBy('id', 'desc')->first();
+        $key = array_search($id, $posts);
+
+        if ($key == 0) {
+            $pre = null;
+            $next = Post::find($posts[$key + 1]);
+        } elseif ($key == count($posts) - 1) {
+            $next = null;
+            $pre = Post::find($posts[$key - 1]);
+        } else {
+            $pre = Post::find($posts[$key - 1]);
+            $next = Post::find($posts[$key + 1]);
+        }
 
         return view('kslm.support_detail', compact('banners', 'post', 'pre', 'next'));
     }

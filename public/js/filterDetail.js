@@ -52,12 +52,70 @@ $(function () {
 
             var picSwiper = new Swiper('.pic-group-swiper', {
                 direction: 'vertical',
+                autoplay: 5000,
                 slidesPerView: 'auto',
                 autoplayDisableOnInteraction: false,
                 mousewheelControl: true,
                 height: 90,
                 grabCursor: true
             });
+
+            // 是否停止轮循
+            $('#detailImg').on('mouseover', function () {
+                picSwiper.stopAutoplay();
+                $('.detail-img .pos-ab').css({
+                display: 'block'
+                });
+            })
+            $('#detailImg').on('mouseout', function () {
+                picSwiper.startAutoplay();
+                $('.detail-img .pos-ab').css({
+                display: 'none'
+                });
+            })
+
+            if ($('#detailImg')[0]) {
+                var scale = 2;
+                var _showImg = $('.detail-img').find('.show-img img')[0];
+                var lay = $('.detail-img').find('.lay')[0];
+                var detailImg = $('#detailImg')[0];
+                var w = detailImg.offsetWidth;
+                var h = detailImg.offsetHeight;
+                $('.detail-img').find('.lay').css({
+                width: w / scale + 'px',
+                height: h / scale + 'px'
+                })
+                $(_showImg).css({
+                width: w * scale + 'px',
+                height: h * scale + 'px'
+                })
+                
+                $('#detailImg').on('mousemove', function (e) {
+                e = e || event;
+                var x = e.clientX - $(this)[0].offsetLeft - lay.offsetWidth / 2;
+                var y = e.clientY - lay.offsetHeight / 2 - ($(this)[0].offsetTop - $(document).scrollTop());
+                if (x <= 0) {
+                    x = 0;
+                }
+                if (y <= 0) {
+                    y = 0;
+                }
+                if (x >= w - lay.offsetWidth) {
+                    x = w - lay.offsetWidth;
+                }
+                if (y >= h - lay.offsetHeight) {
+                    y = h - lay.offsetHeight;
+                }
+                $(lay).css({
+                    left: x + 'px',
+                    top: y + 'px'
+                })
+                $(_showImg).css({
+                    left: -x * scale + 'px',
+                    top: -y * scale + 'px'
+                })
+                })
+            }
 
             // 初始化详情图
             var _initSrc = $('.pic-group-swiper .swiper-slide:eq(0)').find('img').attr('src');
@@ -66,17 +124,13 @@ $(function () {
             $('.pic-prev').on('click', function () {
                 picSwiper.slidePrev();
                 var _activeIndex = picSwiper.activeIndex;
-                console.log(picSwiper.activeIndex);
                 var _src = $('.pic-group-swiper .swiper-slide').eq(_activeIndex).find('img').attr('src');
-                console.log(_src);
                 $('.detail-containter .detail-img').find('img').attr({src: _src});
             })
             $('.pic-next').on('click', function () {
                 picSwiper.slideNext();
                 var _activeIndex = picSwiper.activeIndex;
-                console.log(picSwiper.activeIndex);
                 var _src = $('.pic-group-swiper .swiper-slide').eq(_activeIndex).find('img').attr('src');
-                console.log(_src);
                 $('.detail-containter .detail-img').find('img').attr({src: _src});
             })
 

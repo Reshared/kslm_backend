@@ -15,6 +15,9 @@ Route::group([
     });
     $router->post('upload', 'UploadController@uploadImg');
     $router->post('ck_upload', 'UploadController@uploadCk');
+    $router->post('new_upload', 'ProductController@upload');
+    $router->post('new_upload_file', 'ProductController@uploadFile');
+    $router->post('new_delete', 'ProductController@delete');
     $router->post('products/{id}/edit/upload', 'UploadController@uploadMul');
     $router->post('products/{id}/edit/un_upload', 'UploadController@unUploadMul');
     $router->post('products/{id}/edit/upload_file', 'UploadController@uploadFiles');

@@ -73,8 +73,12 @@
                                 @endforeach
                             </div>
                         </div>
-                        <div class="detail-img">
+                        <div class="detail-img pos-re" id="detailImg">
                             <img src="{{ $product['image'] }}">
+                            <div class="lay pos-ab"></div>
+                            <div class="pos-ab show-img">
+                                <img src="{{ $product['image'] }}">
+                            </div>
                         </div>
                         <div class="pic-group">
                             <span class="pic-prev pic-control">向上</span>
