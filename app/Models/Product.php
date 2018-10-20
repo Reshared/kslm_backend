@@ -50,13 +50,13 @@ class Product extends Model
         return $urls;
     }
 
-    public function setImageGroupAttribute($urls)
+    public function setImagesPathsAttribute($urls)
     {
         $imagesPaths = str_replace(['"",', ',,'], ['', ','], $urls);
         $this->attributes['image_group'] = trim($imagesPaths, ',');
     }
 
-    public function setFilesAttribute($urls)
+    public function setFilesPathsAttribute($urls)
     {
         $imagesPaths = str_replace(['"",', ',,'], ['', ','], $urls);
         $this->attributes['files'] = trim($imagesPaths, ',');

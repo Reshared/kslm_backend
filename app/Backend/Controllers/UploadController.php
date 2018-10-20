@@ -33,18 +33,10 @@ class UploadController extends Controller
                 $n = $i + 1;
                 if ($file[$i]->isValid()) {
                     if (in_array(strtolower($file[$i]->extension()), ['jpeg', 'jpg', 'gif', 'gpeg', 'png'])) {
-                        $picname = $file[$i]->getClientOriginalName();//获取上传原文件名
-                        $ext = $file[$i]->getClientOriginalExtension();//获取上传文件的后缀名
-                        // 重命名
-                        $filename = time() . str_random(6) . "." . $ext;
-                        if ($file[$i]->move("uploads/images", $filename)) {
-                            $newFileName = '/' . "uploads/images" . '/' . $filename;
+                        if ($newFileName = $file[$i]->store("uploads/images/")) {
                             $m = $m + 1;
-                            // return response()->json(['ResultData' => 0, 'info' => '上传成功', 'newFileName' => $newFileName ]);
-
                         } else {
                             $k = $k + 1;
-                            // return response()->json(['ResultData' => 4, 'info' => '上传失败']);
                         }
                         $msg = $m . "张图片上传成功 " . $k . "张图片上传失败<br>";
                         $return[] = ['ResultData' => 0, 'info' => $msg, 'newFileName' => $newFileName];
@@ -84,11 +76,8 @@ class UploadController extends Controller
         }
 
         $picname = $file->getClientOriginalName();
-        $ext = $file->getClientOriginalExtension();
-        $filename = time() . str_random(6) . "." . $ext;
 
-        if ($file->move("uploads/images", $filename)) {
-            $newFileName = '/' . "uploads/images" . '/' . $filename;
+        if ($newFileName = $file->store("uploads/images/")) {
             return response()->json([
                 'uploaded' => 1,
                 'fileName' => $picname,
@@ -117,9 +106,7 @@ class UploadController extends Controller
                 return response()->json(['reason' => '文件不合法'])->setStatusCode(413);
             }
 
-            $name = $file->getClientOriginalName();
-            $file->move('uploads/images/', $name);
-            $uploads[] = 'uploads/images/'. $name;
+            $uploads[] = $file->store('uploads/images/');
         }
 
         $product = Product::findOrFail($id);
@@ -151,10 +138,7 @@ class UploadController extends Controller
             if (!$file->isValid()) {
                 return response()->json(['reason' => '文件不合法'])->setStatusCode(413);
             }
-
-            $name = $file->getClientOriginalName();
-            $file->move('uploads/files/', $name);
-            $uploads[] = 'uploads/files/'. $name;
+            $uploads[] = $file->store('uploads/files/');
         }
 
         $product = Product::findOrFail($id);
