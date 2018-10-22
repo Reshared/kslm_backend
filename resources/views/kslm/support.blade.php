@@ -48,9 +48,9 @@
                     <ul class="list-content clear">
                         @foreach($posts as $post)
                             <li>
-                                <a class="item" href="{{ url('support', ['id' => $post->id]) }}">
-                                    <img width="200px" height="140px" src="{{ $post->image }}" alt="{{ $post->title }}">
-                                    <div class="text">
+                                <a class="item clear" href="{{ url('support', ['id' => $post->id]) }}">
+                                    <img class="fl" width="200px" height="140px" src="{{ $post->image }}" alt="{{ $post->title }}">
+                                    <div class="text fl">
                                         <div class="title">{{ $post->title }}</div>
                                         <p class="describe">{{ $post->description }}</p>
                                         <div class="item-footer clear font-14">

@@ -83,17 +83,12 @@
                                     <i></i>
                                 </a>
                             </li>
-                            <li class="side-group">
-                                <button class="btn" type="button" data-toggle="modal" data-target="#preSelectModal">
-                                    <span>精准选型</span> <i></i>
-                                </button>
-                            </li>
                         @endforeach
-                        <!-- <li class="btn-group">
+                        <li class="side-group">
                             <button class="btn" type="button" data-toggle="modal" data-target="#preSelectModal">
-                                <span>精准选型</span> <span class="glyphicon glyphicon-menu-down"></span>
+                                <span>精准选型</span> <i></i>
                             </button>
-                        </li> -->
+                        </li>
                     </ul>
                 </div>
                 <!-- 列表 -->

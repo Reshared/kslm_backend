@@ -21,6 +21,7 @@ $(function () {
         swiper: function () {
             var mySwiper = new Swiper('.banner-swiper-container', {
                 pagination: '.banner-swiper-pagination',
+                paginationClickable: true,
                 observer: true,
                 loop: true,
                 autoplay: 3000
