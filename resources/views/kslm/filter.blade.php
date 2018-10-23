@@ -53,7 +53,7 @@
             </div>
         </div>
 
-        <div class="btn-group-container" data-toggle="modal" data-target="#preSelectModal">
+        <div class="btn-group-container pointer" data-toggle="modal" data-target="#preSelectModal">
             <span>精准选型</span> <span class="glyphicon glyphicon-menu-right"></span>
         </div>
         <!-- 主要内容 -->
@@ -65,11 +65,6 @@
                         <li><a href="{{ url('/') }}">首页</a></li>
                         <li class="active">科氏滤膜</li>
                     </ol>
-                    <div class="fr pos-re">
-                        <button class="btn" type="button" data-toggle="modal" data-target="#preSelectModal">
-                            <span>精准选型</span> <span class="glyphicon glyphicon-menu-down"></span>
-                        </button>
-                    </div>
                 </div>
 
                 <!-- 侧边栏 -->
@@ -84,7 +79,7 @@
                                 </a>
                             </li>
                         @endforeach
-                        <li class="side-group">
+                        <li class="side-group pointer">
                             <button class="btn" type="button" data-toggle="modal" data-target="#preSelectModal">
                                 <span>精准选型</span> <i></i>
                             </button>
