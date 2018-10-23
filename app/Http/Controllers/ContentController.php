@@ -54,14 +54,13 @@ class ContentController extends Controller
 
         $key = array_search($id, $posts);
 
-        if ($key == 0) {
-            $pre = null;
-            $next = Post::find($posts[$key + 1]);
-        } elseif ($key == count($posts) - 1) {
-            $next = null;
+        $pre = null;
+        $next = null;
+        if (key_exists($key - 1, $posts)) {
             $pre = Post::find($posts[$key - 1]);
-        } else {
-            $pre = Post::find($posts[$key - 1]);
+        }
+
+        if (key_exists($key + 1, $posts)) {
             $next = Post::find($posts[$key + 1]);
         }
 
