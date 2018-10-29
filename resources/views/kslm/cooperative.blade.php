@@ -25,9 +25,9 @@
         <main class="bg-white">
             <!-- cooperative title -->
             <div class="en-title">
-                <img src="{{ asset('images/wave-line.jpg') }}" alt="">
+                <img src="{{ asset('images/wave-line.png') }}" alt="">
                 <span>COOPERATIVE CUSTOMERS</span>
-                <img src="{{ asset('images/wave-line.jpg') }}" alt="">
+                <img src="{{ asset('images/wave-line.png') }}" alt="">
             </div>
             <div class="cn-title">合作客户</div>
             <div class="container">
