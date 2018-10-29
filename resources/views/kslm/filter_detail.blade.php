@@ -109,7 +109,7 @@
                                 @if($product['files'])
                                     @foreach($product['files'] as $url)
                                         <li class="clear"><a target="_blank" class="ellipsis" href="{{ $url }}">{{ url2Name($url) }}</a><a target="_blank" href="{{ $url }}"><img
-                                                        src="{{ asset('images/download.png') }}" alt="点击下载"></a></li>
+                                                        src="{{ asset('images/download.jpg') }}" alt="点击下载"></a></li>
                                     @endforeach
                                 @endif
                             </ul>

@@ -60,15 +60,15 @@
 
                     <ul class="bottom-list">
                         <li class="text-center mar-5">
-                            <img src="{{ asset("images/about1.png" ) }}" alt="">
+                            <img src="{{ asset("images/about1.jpg" ) }}" alt="">
                             <div class="text">性能稳定</div>
                         </li>
                         <li class="text-center mar-5">
-                            <img src="{{ asset("images/about2.png" ) }}" alt="">
+                            <img src="{{ asset("images/about2.jpg" ) }}" alt="">
                             <div class="text">节约环保</div>
                         </li>
                         <li class="text-center">
-                            <img src="{{ asset("images/about3.png" ) }}" alt="">
+                            <img src="{{ asset("images/about3.jpg" ) }}" alt="">
                             <div class="text">降低成本</div>
                         </li>
                     </ul>
@@ -105,7 +105,7 @@
         <div class="modal-content">
           <div class="modal-body pos-re">
             <span class="pos-ab close-icon" data-dismiss="modal" aria-label="Close"></span>
-            <img src="./images/honor1.png" alt="">
+            <img src="./images/honor1.jpg" alt="">
           </div>
         </div>
       </div>

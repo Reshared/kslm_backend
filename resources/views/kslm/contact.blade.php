@@ -23,7 +23,7 @@
         });
         var marker = new AMap.Marker({
             position: map.getCenter(),
-            icon: 'https://webapi.amap.com/theme/v1.3/markers/n/mark_b1.png',
+            icon: 'https://webapi.amap.com/theme/v1.3/markers/n/mark_b1.jpg',
         });
         marker.setMap(map);
         // 设置鼠标划过点标记显示的文字提示
@@ -42,7 +42,7 @@
         // });
         // var marker1 = new AMap.Marker({
         //     position: map1.getCenter(),
-        //     icon: 'https://webapi.amap.com/theme/v1.3/markers/n/mark_b1.png',
+        //     icon: 'https://webapi.amap.com/theme/v1.3/markers/n/mark_b1.jpg',
         // });
         // marker1.setMap(map1);
         // // 设置鼠标划过点标记显示的文字提示
@@ -77,19 +77,19 @@
                         </div>
                         <ul class="list">
                             <li>
-                                <img src="./images/icon-server.png" alt="">
+                                <img src="./images/icon-server.jpg" alt="">
                                 <span>统一服务热线：</span>400-158-1866
                             </li>
                             <li>
-                                <img src="./images/icon-building.png" alt="">
+                                <img src="./images/icon-building.jpg" alt="">
                                 <span>北京代表处：</span>010-66112915
                             </li>
                             <li>
-                                <img src="./images/icon-email.png" alt="">
+                                <img src="./images/icon-email.jpg" alt="">
                                 <span>邮箱：</span>koch@kochmembrane.cn
                             </li>
                             <li>
-                                <img src="./images/icon-location.png" alt="">
+                                <img src="./images/icon-location.jpg" alt="">
                                 <span>地址：北京市大兴区庆祥南路29号</span>
                             </li>
                         </ul>

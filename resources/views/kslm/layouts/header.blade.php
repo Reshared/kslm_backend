@@ -2,12 +2,12 @@
 <header class="lm-header">
     <div class="lm-header-container lm-container clear">
         <a href="{{ url('/') }}" class="logo-container fl">
-            <img class="logo" src="{{ asset('images/logo.png') }}" alt="logo"/>
+            <img class="logo" src="{{ asset('images/logo.jpg') }}" alt="logo"/>
         </a>
         <div class="fr">
             <p><span class="pos-re">中文</span></p>
             <!-- <i class="lm-icon"></i> -->
-            <img src="{{ asset('images/icon-lm-nav.png') }}">
+            <img src="{{ asset('images/icon-lm-nav.jpg') }}">
         </div>
     </div>
 </header>
@@ -28,7 +28,7 @@
                 <p class="weChart-text"><i></i><span class="animation-line" data-locale="header_weChart">微信</span></p>
                 <b class="weChart-arrow pos-ab animated"></b>
                 <div class="weChart-img pos-ab animated">
-                    <img src="{{ asset('images/weChat11.png') }}" alt="微信">
+                    <img src="{{ asset('images/weChat11.jpg') }}" alt="微信">
                 </div>
             </li>
         </ul>
