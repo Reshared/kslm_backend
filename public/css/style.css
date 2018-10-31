@@ -856,6 +856,7 @@ body .precision-select .recommend-list-container ul li {
   border: 1px solid #ccc;
   background-color: #fff;
   margin-bottom: 20px;
+  max-width: 700px;
 }
 body .precision-select .recommend-list-container ul li:after {
   display: none;

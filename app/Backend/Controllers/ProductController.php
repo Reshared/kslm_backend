@@ -116,7 +116,7 @@ EOT
             $form->select('major_category_id', '主分类')->options($majorCateArr)->rules('required');
             $form->select('category_id', '辅分类')->options($cateArr);
             $form->text('name', '产品名称')->rules('required|max:150');
-            $form->textarea('description', '产品描述')->rules('required|max:1000');
+            $form->ckeditor('description', '产品描述')->rules('required|max:1000');
             $form->text('seo_title', 'title')->rules('max:255');
             $form->text('seo_keywords', 'keywords')->rules('max:255');
             $form->text('seo_description', 'description')->rules('max:255');
@@ -143,7 +143,7 @@ EOT
                     '_token'    => csrf_token(),
                     '_method'   => 'POST',
                 ],
-            ]);
+            ])->help('推荐尺寸为317*291');
             $form->multipleFile('files','附件')->removable()->options([
                 'showRemove' => false,
                 'showCancel' => false,

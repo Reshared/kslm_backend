@@ -128,6 +128,11 @@
   vertical-align: top;
 }
 
+.filter-detail .container .detail-containter .detail-header .detail-desc ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
 .filter-detail .container .detail-containter .detail-header .detail-desc .desc-title {
   margin: 20px 0 30px;
   font-weight: bold;

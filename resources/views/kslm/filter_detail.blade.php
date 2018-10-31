@@ -33,8 +33,32 @@
     @include('kslm.layouts.nav')
     <!-- 轮播图 -->
     @include('kslm.layouts.image')
-
-    <!-- 主要内容 -->
+    <!-- 精准选型 -->
+        <div class="modal fade precision-select" tabindex="-1" role="dialog" id="preSelectModal">
+            <div class="modal-dialog" role="document" style="overflow-x: auto;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="co-main text-center">产品选型精准推荐</h3>
+                        <div class="recommend-container">
+                            <div class="recommend-list-container" style="min-width:100%">
+                                <div class="recommend-select">
+                                    <ul></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="modal-footer" style="width: 99%;">
+                        <button type="button" class="btn btn-primary" id="confirm_filter">确认</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- 主要内容 -->
         <main class="bg-white">
             <div class="container">
                 <!-- 面包屑 -->
@@ -58,6 +82,11 @@
                                 </a>
                             </li>
                         @endforeach
+                        <li class="side-group pointer">
+                            <button class="btn" type="button" data-toggle="modal" data-target="#preSelectModal">
+                                <span>精准选型</span> <i></i>
+                            </button>
+                        </li>
                     </ul>
                 </div>
 
