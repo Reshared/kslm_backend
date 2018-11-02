@@ -124,7 +124,7 @@
                         </div>
                         <div class="detail-desc">
                             <p class="desc-title font-20 co-000">{{ $product['name'] }}</p>
-                            {{ $product['description'] }}
+                            {!! $product['description'] !!}
                         </div>
                     </div>
 
