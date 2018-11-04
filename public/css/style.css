@@ -307,6 +307,9 @@ body main .container {
   line-height: 1;
   padding: 25px 0;
 }
+.nav .nav-container .logo {
+  width: 120px;
+}
 
 .nav .nav-container .nav-list {
   display: inline-block;
