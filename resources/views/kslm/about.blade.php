@@ -60,7 +60,7 @@
 
                     <ul class="bottom-list">
                         @foreach($settings['company_des_imgs'] as $img)
-                            <li class="text-center mar-5">
+                            <li class="text-center">
                                 <img src="{{ $img }}" alt="">
                                 <div class="text">性能稳定</div>
                             </li>

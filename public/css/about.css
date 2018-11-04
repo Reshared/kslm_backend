@@ -48,6 +48,9 @@
   padding: 40px 0;
   background-color: #fff;
 }
+.about main .container .list-container .bottom-list li:not(:last-child) {
+  margin-right: 5%;
+}
 .about main .container .list-container .bottom-list li.mar-5{
   margin-right: 5%;
 }
