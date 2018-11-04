@@ -1,7 +1,7 @@
 <div class="nav">
     <div class="nav-container container clear">
         <a href="{{ url('/') }}" class="logo-container">
-            <img class="logo" src="{{ asset('images/logo.png') }}" alt="logo"/>
+            <img class="logo" src="{{ $settings['logo'] }}" alt="logo"/>
         </a>
 
         <nav class="nav-list clear fr">
