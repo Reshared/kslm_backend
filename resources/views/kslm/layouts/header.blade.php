@@ -15,7 +15,7 @@
 <!-- PC端头部 -->
 <header class="header">
     <div class="header-container container clear">
-        <span data-locale="header_welcome_msg" class="welcome-msg fl pos-re animation-line">您好，欢迎进入科氏滤膜网站</span>
+        <span data-locale="header_welcome_msg" class="welcome-msg fl pos-re animation-line">{{ $settings['top_words'] }}</span>
 
         <ul class="clear fr">
             <li class="fl lang langZh hide"><span class="animation-line">中文</span></li>
@@ -28,7 +28,7 @@
                 <p class="weChart-text"><i></i><span class="animation-line" data-locale="header_weChart">微信</span></p>
                 <b class="weChart-arrow pos-ab animated"></b>
                 <div class="weChart-img pos-ab animated">
-                    <img src="{{ asset('images/weChat11.png') }}" alt="微信">
+                    <img src="{{ $settings['qrcode'] }}" alt="微信">
                 </div>
             </li>
         </ul>

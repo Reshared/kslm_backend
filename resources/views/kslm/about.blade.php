@@ -59,18 +59,12 @@
                     </div>
 
                     <ul class="bottom-list">
-                        <li class="text-center mar-5">
-                            <img src="{{ asset("images/about1.png" ) }}" alt="">
-                            <div class="text">性能稳定</div>
-                        </li>
-                        <li class="text-center mar-5">
-                            <img src="{{ asset("images/about2.png" ) }}" alt="">
-                            <div class="text">节约环保</div>
-                        </li>
-                        <li class="text-center">
-                            <img src="{{ asset("images/about3.png" ) }}" alt="">
-                            <div class="text">降低成本</div>
-                        </li>
+                        @foreach($settings['company_des_imgs'] as $img)
+                            <li class="text-center mar-5">
+                                <img src="{{ $img }}" alt="">
+                                <div class="text">性能稳定</div>
+                            </li>
+                        @endforeach
                     </ul>
                 </section>
 

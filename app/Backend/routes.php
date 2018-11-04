@@ -15,6 +15,8 @@ Route::group([
     });
     $router->post('upload', 'UploadController@uploadImg');
     $router->post('ck_upload', 'UploadController@uploadCk');
+    $router->post('uploads/setting', 'SettingController@upload');
+    $router->post('deletes/setting', 'SettingController@delete');
     $router->post('new_upload', 'ProductController@upload');
     $router->post('new_upload_file', 'ProductController@uploadFile');
     $router->post('new_delete', 'ProductController@delete');
@@ -35,5 +37,6 @@ Route::group([
         'categories' => 'CategoryController',
         'products' => 'ProductController',
         'messages' => 'MessageController',
+        'settings' => 'SettingController',
     ]);
 });

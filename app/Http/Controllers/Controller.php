@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\MajorCategory;
 use App\Models\Post;
+use App\Models\Setting;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -55,5 +56,21 @@ class Controller extends BaseController
             $postArr[$post->id] = '【' . $post->type . '】' . $post->title;
         }
         return $postArr;
+    }
+
+    protected function getSetting($add = [])
+    {
+        $keys = array_merge(['logo', 'wechat_qrcode', 'top_words', 'qa_tel', 'contact_way'], $add);
+        $settings = Setting::whereIn('skey', $keys)->get();
+        $result = [];
+        $result['logo'] = $settings->where('skey', 'logo')->first()->svalue;
+        $result['qrcode'] = $settings->where('skey', 'wechat_qrcode')->first()->svalue;
+        $result['top_words'] = $settings->where('skey', 'top_words')->first()->svalue;
+        $result['tel'] = $settings->where('skey', 'qa_tel')->first()->svalue;
+        $result['contact'] = json_decode($settings->where('skey', 'contact_way')->first()->svalue, true);
+        foreach ($add as $value) {
+            $result[$value] = $settings->where('skey', $value)->first()->svalue;
+        }
+        return $result;
     }
 }

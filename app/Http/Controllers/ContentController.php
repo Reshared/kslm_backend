@@ -21,6 +21,8 @@ class ContentController extends Controller
 {
     public function filter($id)
     {
+        $settings = $this->getSetting();
+
         $banners = Banner::orderBy('sort')->get();
 
         $categories = MajorCategory::orderBy('sort', 'desc')->orderBy('created_at', 'desc')->get();
@@ -35,11 +37,13 @@ class ContentController extends Controller
 
         $releases = Post::whereIn('id', $ids)->get();
 
-        return view('kslm.filter_detail', compact('banners', 'categories', 'product', 'releases'));
+        return view('kslm.filter_detail', compact('banners', 'categories', 'product', 'releases', 'settings'));
     }
 
     public function support($id)
     {
+        $settings = $this->getSetting();
+
         $banners = Banner::orderBy('sort')->get();
 
         $post = Post::findOrFail($id);
@@ -64,11 +68,13 @@ class ContentController extends Controller
             $next = Post::find($posts[$key + 1]);
         }
 
-        return view('kslm.support_detail', compact('banners', 'post', 'pre', 'next'));
+        return view('kslm.support_detail', compact('banners', 'post', 'pre', 'next', 'settings'));
     }
 
     public function cooperative($id)
     {
+        $settings = $this->getSetting();
+
         $banners = Banner::orderBy('sort')->get();
 
         $partner = Partner::findOrFail($id);
@@ -79,6 +85,6 @@ class ContentController extends Controller
 
         $pre = Partner::where('id', '<', $id)->orderBy('id', 'desc')->first();
 
-        return view('kslm.cooperative_detail', compact('banners', 'partner', 'pre', 'next'));
+        return view('kslm.cooperative_detail', compact('banners', 'partner', 'pre', 'next', 'settings'));
     }
 }
