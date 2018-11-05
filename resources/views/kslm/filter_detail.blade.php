@@ -13,6 +13,11 @@
     <script src="{{ asset('js/conf.js') }}"></script>
     <script src="{{ asset('js/index.js') }}"></script>
     <script src="{{ asset('js/filterDetail.js') }}"></script>
+    <script type="text/javascript">
+        var category_id = 0;
+        var major_category_id = {{ $id }};
+        var page = 1;
+    </script>
 @stop
 
 @if ($product['seo_keywords'])

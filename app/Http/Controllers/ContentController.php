@@ -37,7 +37,9 @@ class ContentController extends Controller
 
         $releases = Post::whereIn('id', $ids)->get();
 
-        return view('kslm.filter_detail', compact('banners', 'categories', 'product', 'releases', 'settings'));
+        $id = request('id', 0);
+
+        return view('kslm.filter_detail', compact('banners', 'categories', 'product', 'releases', 'settings', 'id'));
     }
 
     public function support($id)
