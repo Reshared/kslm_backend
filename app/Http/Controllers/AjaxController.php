@@ -28,7 +28,9 @@ class AjaxController extends Controller
             //优先尝试获取产品
             $childrens = Product::byCategory($id)->get();
             if (count($childrens) <= 0) {
-                $category = Category::with('children')->findOrFail($id);
+                $category = Category::with(['children' => function ($q) {
+                    return $q->defaultOrder();
+                }])->findOrFail($id);
                 $childrens = $category->children;
                 $isCategory = true;
             }
